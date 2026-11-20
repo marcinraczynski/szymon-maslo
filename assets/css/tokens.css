@@ -1,0 +1,44 @@
+/* Tokeny projektu – źródło: docs/design-system.md */
+:root {
+  /* kolory */
+  --page: #050504;
+  --bg: #0B0A09;
+  --card: #12110F;
+  --text: #EEE8DE;
+  --text-2: #CFC8BC;
+  --muted: #A39B8E;
+  --placeholder: #8C857A;
+  --gold: #D6B88A;
+  --gold-hover: #E8D5B2;
+  --line: rgba(214, 184, 138, .22);
+  --line2: rgba(238, 232, 222, .09);
+  --glass-line: rgba(238, 232, 222, .14);
+  --gold-gradient: linear-gradient(135deg, #E9D3A8, #C9A46C 55%, #A9864F);
+  --error: #E7A48C;
+
+  /* typografia */
+  --font: 'Montserrat', system-ui, sans-serif;
+
+  /* kształty */
+  --r: 28px;
+  --r-card: 22px;
+  --r-card-lg: 24px;
+  --r-glass: 16px;
+  --r-pill: 999px;
+
+  /* układ */
+  --wrap-max: 1320px;
+  --wrap-pad: clamp(24px, 4vw, 56px);
+  --sec-pad: 120px;
+
+  /* ruch (punkty zaczepienia pod animacje) */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --r: 20px;
+    --wrap-pad: 20px;
+    --sec-pad: 72px;
+  }
+}

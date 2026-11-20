@@ -1,0 +1,23 @@
+/* Sekcja 6: Newsletter */
+.newsletter { padding: 80px 0; border-top: 1px solid var(--line2); background: radial-gradient(40% 120% at 100% 50%, rgba(214,184,138,.08), rgba(214,184,138,0) 70%); }
+.newsletter__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.newsletter__title { font-size: clamp(26px, 2.4vw, 36px); line-height: 1.2; }
+.newsletter__text { margin-top: 14px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.newsletter__form { display: flex; align-items: flex-end; gap: 12px; }
+.newsletter__field { flex: 1; }
+.newsletter__field input {
+  width: 100%; height: 56px; background: transparent; border: 0; border-bottom: 1px solid rgba(238,232,222,.3);
+  color: var(--text); font: inherit; font-size: 17px; font-weight: 300; outline: none;
+}
+.newsletter__field input::placeholder { color: var(--placeholder); }
+.newsletter__field input:focus { border-color: var(--gold); }
+.newsletter__field input:focus-visible { outline: none; box-shadow: 0 1px 0 0 var(--gold); }
+
+@media (max-width: 1100px) {
+  .newsletter__in { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .newsletter { padding: 56px 0; }
+  .newsletter__in { gap: 28px; }
+  .newsletter__form { flex-direction: column; align-items: stretch; }
+}

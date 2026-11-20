@@ -1,0 +1,52 @@
+/* Sekcja 4: Przeszedłem każdy szczebel (schody, fundacja) */
+.career__stairs { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); align-items: end; height: 540px; }
+.career__step {
+  position: relative; display: flex; flex-direction: column; height: var(--h, auto); padding: 22px 18px 0;
+  border-top: 1px solid var(--gold); border-left: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(214,184,138,.12), rgba(214,184,138,.02) 70%, rgba(214,184,138,0));
+  transition: background .5s;
+}
+.career__step:hover { background: linear-gradient(180deg, rgba(214,184,138,.22), rgba(214,184,138,.04) 70%, rgba(214,184,138,0)); }
+.career__step::before { content: ""; position: absolute; top: -5px; left: -5px; width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); }
+.career__year { font-size: 34px; font-weight: 100; letter-spacing: -.03em; line-height: 1; color: var(--gold); }
+.career__role { margin-top: 16px; font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.career__name { margin-top: 6px; font-size: 16px; font-weight: 600; line-height: 1.25; }
+.career__gain { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--text-2); }
+.career__step--now { background: linear-gradient(180deg, rgba(214,184,138,.32), rgba(214,184,138,.06) 70%, rgba(214,184,138,0)); box-shadow: 0 -30px 80px -30px rgba(214,184,138,.45); }
+.career__step--now .career__year { font-weight: 600; }
+.career__step--now::before { box-shadow: 0 0 0 5px rgba(214,184,138,.2), 0 0 22px rgba(214,184,138,.8); }
+
+.career__mission { position: relative; margin-top: 56px; border-radius: var(--r-card-lg); overflow: hidden; border: 1px solid var(--line); }
+.career__mission-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(40% 120% at 8% 50%, rgba(214,184,138,.55), rgba(214,184,138,0) 70%),
+              radial-gradient(30% 90% at 95% 100%, rgba(169,134,79,.45), rgba(169,134,79,0) 70%), var(--card);
+}
+.career__mission-flute { position: absolute; inset: 0; }
+.career__mission-in { position: relative; z-index: 1; display: grid; grid-template-columns: 220px minmax(0, 1fr) auto; gap: 48px; align-items: center; padding: 48px 52px; }
+.career__mission-in img { width: 200px; height: auto; }
+.career__mission-title { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.2; }
+.career__mission-text { margin-top: 14px; font-size: 16px; line-height: 1.6; color: var(--text-2); max-width: 560px; }
+
+.career__foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line2); }
+.career__foot p { font-size: 20px; font-weight: 200; letter-spacing: -.01em; }
+.career__foot p b { font-weight: 600; }
+
+@media (max-width: 1100px) {
+  .career__stairs { grid-template-columns: repeat(4, minmax(0, 1fr)); height: auto; row-gap: 24px; }
+  .career__step { height: auto; }
+  .career__mission-in { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .career__stairs { grid-template-columns: 1fr; row-gap: 0; }
+  .career__step { display: grid; grid-template-columns: 76px 1fr; column-gap: 14px; padding: 18px 16px 20px; border-left: 0; }
+  .career__step::before { left: -4px; }
+  .career__year { grid-row: 1 / span 3; font-size: 30px; }
+  .career__role { margin-top: 2px; }
+  .career__mission { margin-top: 40px; }
+  .career__mission-in { gap: 20px; padding: 28px 24px; }
+  .career__mission-in img { width: 170px; }
+  .career__mission-in br { display: none; }
+  .career__foot { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .career__foot p { font-size: 18px; }
+}

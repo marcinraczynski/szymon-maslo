@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Szymon Masło – sprzedaż, zespoły i firmy</title>
+<meta name="description" content="Dla founderów i właścicieli firm na wczesnym etapie. Konsultacje, mentoring operacyjny, a przy wybranych projektach partnerstwo.">
+<meta name="robots" content="noindex, nofollow"><!-- wersja do akceptacji: usuń przy publikacji -->
+<meta name="theme-color" content="#050504">
+<meta property="og:title" content="Szymon Masło">
+<meta property="og:description" content="Buduję sprzedaż, zespoły i firmy.">
+<meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/logo/oryginaly/logo-512.png">
+
+<!-- Font: na start Google Fonts, docelowo self-hosted woff2 (latin-ext) w assets/fonts + preload -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..800&amp;display=swap">
+
+<!-- LCP: zdjęcie Szymona i tło hero -->
+<link rel="preload" as="image" type="image/webp" href="assets/img/hero-szymon-cutout-805.webp" imagesrcset="assets/img/hero-szymon-cutout-480.webp 480w, assets/img/hero-szymon-cutout-805.webp 805w" imagesizes="(max-width: 640px) 240px, 510px" fetchpriority="high">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sections/header.css">
+<link rel="stylesheet" href="assets/css/sections/hero.css">
+<link rel="stylesheet" href="assets/css/sections/results.css">
+<link rel="stylesheet" href="assets/css/sections/paths.css">
+<link rel="stylesheet" href="assets/css/sections/career.css">
+<link rel="stylesheet" href="assets/css/sections/people.css">
+<link rel="stylesheet" href="assets/css/sections/newsletter.css">
+<link rel="stylesheet" href="assets/css/sections/apply.css">
+<link rel="stylesheet" href="assets/css/sections/footer.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+<script>
+  /* Animacje tylko z JS i bez prefers-reduced-motion. Bezpiecznik: gdy main.js się nie wczyta w 3 s, pokaż wszystko. */
+  (function (h) {
+    h.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('motion');
+    setTimeout(function () { if (!h.classList.contains('motion-ready')) h.classList.remove('motion'); }, 3000);
+  })(document.documentElement);
+</script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<div class="site">
+<div class="site-frame" id="top">
+
+<!-- ============ template-part: home/hero (+ header.php) ============ -->
+<section class="hero" aria-labelledby="hero-h" data-section="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/img/hero-bg-korytarz-1280.webp" srcset="assets/img/hero-bg-korytarz-768.webp 768w, assets/img/hero-bg-korytarz-1280.webp 1280w, assets/img/hero-bg-korytarz-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
+  </div>
+  <div class="hero__photo">
+    <img src="assets/img/hero-szymon-cutout-805.webp" srcset="assets/img/hero-szymon-cutout-480.webp 480w, assets/img/hero-szymon-cutout-805.webp 805w" sizes="(max-width: 640px) 240px, 510px" width="805" height="1439" alt="Szymon Masło w beżowym garniturze" fetchpriority="high">
+  </div>
+  <div class="hero__glass flute" aria-hidden="true"></div>
+  <div class="hero__dim" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="topbar__logo" href="#top" aria-label="Szymon Masło, strona główna"><img src="assets/logo/szymon-maslo-white.svg" width="142" height="36" alt=""></a>
+    <nav class="topbar__nav" aria-label="Główna nawigacja">
+      <a href="#">Współpraca</a>
+      <a href="#">Startupy</a>
+      <a href="#">O mnie</a>
+      <a href="#">Blog</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--ghost topbar__cta" href="#porozmawiajmy">Porozmawiajmy</a>
+      <button class="topbar__menu-btn" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu" data-mmenu-open><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg></button>
+    </div>
+  </header>
+
+  <div class="hero__social">
+    <a href="https://www.linkedin.com/in/szymonmaslo/" aria-label="LinkedIn" rel="noopener" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></a>
+    <a href="https://www.instagram.com/szymon_maslovsky" aria-label="Instagram" rel="noopener" target="_blank"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+
+  <div class="hero__copy" id="tresc">
+    <h1 class="hero__title thin" id="hero-h" data-split>Buduję sprzedaż, <b>zespoły i&nbsp;firmy.</b></h1>
+    <p class="hero__lead lead">Dla founderów i&nbsp;właścicieli firm na wczesnym etapie. Konsultacje, mentoring operacyjny, a&nbsp;przy wybranych projektach partnerstwo.</p>
+    <div class="hero__ctas">
+      <a class="btn" href="#porozmawiajmy">Porozmawiajmy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+      <a class="btn btn--ghost" href="#sciezki">Jak pomagam</a>
+    </div>
+  </div>
+
+  <nav class="hero__cells" aria-label="Twoja sytuacja">
+    <a class="hero__cell" href="#sciezki"><span class="hero__cell-label">Masz pomysł <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Sprawdzę, czy ktoś za to zapłaci.</span></a>
+    <a class="hero__cell" href="#sciezki"><span class="hero__cell-label">Masz firmę <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Pomogę jej znów rosnąć.</span></a>
+    <a class="hero__cell" href="#sciezki"><span class="hero__cell-label">Szukasz kapitału <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Przygotuję Cię do inwestora.</span></a>
+    <a class="hero__cell" href="#sciezki"><span class="hero__cell-label">Masz startup <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Wejdę z&nbsp;Tobą jako partner.</span></a>
+  </nav>
+</section>
+
+<main>
+<!-- ============ template-part: home/results ============ -->
+<section class="sec results" id="liczby" aria-labelledby="wynik-h" data-section="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="wynik-h" data-split>Liczby, które <b>stoją za radą.</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Nie uczę z&nbsp;książek. Uczę tego, co zbudowałem i&nbsp;co działa dziś w&nbsp;moich firmach.</p>
+    </div>
+    <div class="results__grid" data-results-grid data-stagger="scale">
+      <article class="results__tile results__tile--big">
+        <div class="results__art" aria-hidden="true"><img src="assets/img/bento-250mln-schody-1280.webp" srcset="assets/img/bento-250mln-schody-640.webp 640w, assets/img/bento-250mln-schody-1280.webp 1280w" sizes="(max-width: 640px) 820px, 960px" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+        <div class="results__in">
+          <small class="results__label">Obrót zespołów</small>
+          <p class="results__big-num"><b aria-hidden="true" data-count>250</b><span aria-hidden="true">mln zł <br>obrotu</span><span class="visually-hidden">250 mln zł obrotu</span></p>
+          <p class="results__text">Tyle wygenerowały zespoły sprzedażowe, które zbudowałem w&nbsp;branży OZE.</p>
+        </div>
+      </article>
+      <article class="results__tile results__tile--photo">
+        <img class="results__photo" src="assets/img/bento-szymon-bezowy-800.webp" srcset="assets/img/bento-szymon-bezowy-800.webp 800w, assets/img/bento-szymon-bezowy-1200.webp 1200w" sizes="(max-width: 640px) 84vw, (max-width: 1100px) 100vw, 560px" width="1600" height="1600" alt="Szymon Masło w beżowym garniturze, z założonymi rękami" loading="lazy" decoding="async">
+        <div class="results__glass">
+          <div><small>Dziś</small><b class="results__glass-title">Doradzam i&nbsp;rozwijam firmy</b></div>
+          <div class="results__logos">
+            <img src="assets/logo/neptun-energy-white.svg" alt="Neptun Energy" loading="lazy">
+            <img src="assets/logo/neptun-sales-white.svg" alt="Neptun Sales" loading="lazy">
+            <img src="assets/logo/hr-maker-white.svg" alt="HR Maker" loading="lazy">
+            <span class="results__wordmark">ENERGIO</span>
+          </div>
+        </div>
+      </article>
+      <article class="results__tile results__tile--stat">
+        <div class="results__art" aria-hidden="true"><img src="assets/img/bento-12lat-klepsydra-640.webp" srcset="assets/img/bento-12lat-klepsydra-640.webp 640w, assets/img/bento-12lat-klepsydra-1280.webp 1280w" sizes="(max-width: 640px) 820px, 540px" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+        <div class="results__in"><small class="results__label">Doświadczenie</small><span class="results__value"><span data-count>12</span><sup>lat</sup></span><p class="results__text">od pierwszej sprzedaży w&nbsp;terenie do zarządu.</p></div>
+      </article>
+      <article class="results__tile results__tile--stat">
+        <div class="results__art" aria-hidden="true"><img src="assets/img/bento-handlowcy-siec-640.webp" srcset="assets/img/bento-handlowcy-siec-640.webp 640w, assets/img/bento-handlowcy-siec-1280.webp 1280w" sizes="(max-width: 640px) 820px, 540px" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+        <div class="results__in"><small class="results__label">Handlowcy</small><span class="results__value"><span data-count>1000</span><sup>+</sup></span><p class="results__text">przeszkolonych w&nbsp;sprzedaży B2C i&nbsp;B2B.</p></div>
+      </article>
+      <article class="results__tile results__tile--stat">
+        <div class="results__art" aria-hidden="true"><img src="assets/img/bento-managerowie-krol-640.webp" srcset="assets/img/bento-managerowie-krol-640.webp 640w, assets/img/bento-managerowie-krol-1280.webp 1280w" sizes="(max-width: 640px) 820px, 540px" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+        <div class="results__in"><small class="results__label">Managerowie</small><span class="results__value"><span data-count>100</span><sup>+</sup></span><p class="results__text">prowadzi dziś własne <br>zespoły i&nbsp;oddziały.</p></div>
+      </article>
+      <article class="results__tile results__tile--stat results__tile--gold">
+        <div class="results__in"><small class="results__label">Dziś pomagam</small><span class="results__value">Founderom</span><p class="results__text">zbudować sprzedaż, zespół i&nbsp;model biznesowy firmy.</p></div>
+      </article>
+      <div class="results__tile results__press" data-results-skip>
+        <small class="results__press-label">W mediach</small>
+        <ul class="results__press-list" data-stagger="fade" style="--delay:.9s"><li>MamBiznes</li><li>Inwestycje.pl</li><li>Super Biznes</li><li>ESG Trends</li><li>WysokieNapięcie</li><li>Nowa Sprzedaż</li></ul>
+      </div>
+    </div>
+    <div class="results__dots" data-results-dots aria-hidden="true"></div>
+    <div class="results__press-m" data-reveal><small>W mediach</small><p>MamBiznes · Inwestycje.pl · Super Biznes · ESG Trends · WysokieNapięcie · Nowa Sprzedaż</p></div>
+  </div>
+</section>
+
+<!-- ============ template-part: home/paths ============ -->
+<section class="sec sec--flush-top paths" id="sciezki" aria-labelledby="sciezki-h" data-section="paths">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="sciezki-h" data-split>Gdzie jesteś <b>dzisiaj?</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Cztery sytuacje, cztery sposoby pracy. <br>Wybierz swoją, a&nbsp;resztę ustalimy w&nbsp;rozmowie.</p>
+    </div>
+    <div class="paths__top" data-reveal>
+      <div class="paths__tabs" role="tablist" aria-label="Twoja sytuacja" data-paths-tabs></div>
+      <div class="paths__arrows">
+        <button type="button" class="paths__arrow" aria-label="Poprzednia ścieżka" data-paths-prev><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M18 5H2M6 1L2 5l4 4"/></svg></button>
+        <button type="button" class="paths__arrow" aria-label="Następna ścieżka" data-paths-next><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></button>
+      </div>
+    </div>
+    <div class="paths__slider" data-paths-slider data-reveal="right" style="--delay:.15s">
+      <div class="paths__track" data-paths-track></div>
+    </div>
+    <div class="paths__dots" role="group" aria-label="Wybierz ścieżkę" data-paths-dots></div>
+  </div>
+</section>
+
+<!-- ============ template-part: home/career ============ -->
+<section class="sec sec--flush-top career" id="droga" aria-labelledby="droga-h" data-section="career">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="droga-h" data-split>Przeszedłem każdy szczebel. <br><b>Dlatego wiem, co działa.</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Od sprzedaży w&nbsp;terenie po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.</p>
+    </div>
+    <ol class="career__stairs" data-career-list data-stagger="stairs"></ol>
+    <div class="career__mission" data-reveal="scale">
+      <div class="career__mission-glow" aria-hidden="true"></div>
+      <div class="flute career__mission-flute" aria-hidden="true"></div>
+      <div class="career__mission-in">
+        <img src="assets/logo/fundacja-razem-w-walce-white.svg" alt="Fundacja Razem w Walce" loading="lazy">
+        <div>
+          <h3 class="career__mission-title thin">Sukces mierzę nie tylko liczbami, <br><b>ale też wpływem na ludzi.</b></h3>
+          <p class="career__mission-text">Od 2025 tworzę projekty Fundacji Razem w&nbsp;Walce, <br>która wspiera dzieci chore onkologicznie.</p>
+        </div>
+        <a class="btn btn--ghost" href="#">Poznaj fundację</a>
+      </div>
+    </div>
+    <div class="career__foot" data-reveal>
+      <p>Całą tę drogę <b>dostajesz we współpracy.</b></p>
+      <a class="tlink" href="#">Pełna historia <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ template-part: home/people ============ -->
+<section class="sec sec--flush-top people" id="opinie" aria-labelledby="opinie-h" data-section="people">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="opinie-h" data-split>Ludzie, z&nbsp;którymi <b>działam.</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Kliknij osobę, żeby przeczytać, co mówi.</p>
+    </div>
+    <div class="people__list" data-people-list data-stagger="scale"></div>
+  </div>
+</section>
+
+<!-- ============ template-part: home/newsletter ============ -->
+<section class="newsletter" aria-labelledby="news-h" data-section="newsletter">
+  <div class="wrap newsletter__in">
+    <div data-reveal="left">
+      <h2 class="newsletter__title thin" id="news-h">Newsletter co 2&nbsp;tygodnie. <br><b>Bez lania wody.</b></h2>
+      <p class="newsletter__text">Sprzedaż, zarządzanie i&nbsp;leadership w&nbsp;krótkich mailach, które piszę sam.</p>
+    </div>
+    <!-- Akcja do podmiany po wyborze narzędzia: zmień action/method i usuń data-newsletter-mock -->
+    <form data-reveal style="--delay:.2s" class="newsletter__form" action="#" method="post" data-newsletter data-newsletter-mock>
+      <label class="newsletter__field"><span class="visually-hidden">Adres e-mail</span><input type="email" name="email" placeholder="Twój e-mail" autocomplete="email" required></label>
+      <button class="btn" type="submit">Zapisz się</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ template-part: home/apply ============ -->
+<section class="apply" id="porozmawiajmy" aria-labelledby="apply-h" data-section="apply">
+  <div class="wrap apply__grid">
+    <div data-stagger style="--delay:.1s">
+      <h2 class="apply__title h2 thin" id="apply-h">Porozmawiajmy o&nbsp;<b>Twojej firmie.</b></h2>
+      <p class="apply__lead lead">Cztery krótkie pytania. Mój zespół czyta każde zgłoszenie i&nbsp;umawia rozmowę, jeśli widzimy, <br>że mogę pomóc.</p>
+      <div class="apply__limit"><span aria-hidden="true"></span><p>Pracuję z&nbsp;maksymalnie trzema nowymi firmami w&nbsp;miesiącu. Gdy miejsca się skończą, trafisz na listę rezerwową.</p></div>
+    </div>
+
+    <form data-reveal="scale" style="--delay:.25s" class="apply__card" data-apply-form data-endpoint="" novalidate aria-labelledby="apply-h">
+      <div class="apply__card-top" aria-live="polite"><small data-apply-step-label>Krok 1 z&nbsp;4</small><small data-apply-chosen></small></div>
+      <div class="apply__bar" data-apply-bar aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+
+      <div class="apply__step" data-apply-step="1">
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Na jakim etapie <b>jesteś?</b></h3>
+        <div class="apply__choices" data-apply-stages></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="2" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Co dziś najbardziej <b>blokuje wzrost?</b></h3>
+        <label class="apply__field"><span>Kilka zdań wystarczy</span><textarea name="blocker"></textarea></label>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="button" data-apply-nav="next">Dalej</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="3" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Jakiej współpracy <b>szukasz?</b></h3>
+        <div class="apply__choices" data-apply-coop></div>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="4" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Jak możemy <b>się odezwać?</b></h3>
+        <label class="apply__field"><span>Imię i&nbsp;nazwisko</span><input type="text" name="full_name" autocomplete="name" required aria-describedby="apply-err-name"><em class="apply__error" id="apply-err-name" data-apply-error="name"></em></label>
+        <div class="apply__row2">
+          <label class="apply__field"><span>E-mail</span><input type="email" name="email" autocomplete="email" required aria-describedby="apply-err-email"><em class="apply__error" id="apply-err-email" data-apply-error="email"></em></label>
+          <label class="apply__field"><span>Telefon</span><input type="tel" name="phone" autocomplete="tel" required aria-describedby="apply-err-phone"><em class="apply__error" id="apply-err-phone" data-apply-error="phone"></em></label>
+        </div>
+        <div class="apply__consent-wrap">
+          <label class="apply__consent"><input type="checkbox" name="consent" required aria-describedby="apply-err-consent"><span>Zgadzam się na kontakt w&nbsp;sprawie zgłoszenia. Szczegóły w&nbsp;<a href="#">polityce prywatności</a>.</span></label>
+          <em class="apply__error" id="apply-err-consent" data-apply-error="consent"></em>
+        </div>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="submit">Wyślij</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="5" hidden>
+        <div class="apply__done">
+          <h3 class="apply__done-title thin" tabindex="-1" data-apply-heading>Dziękuję. <b>Odezwiemy się.</b></h3>
+          <p class="apply__done-text">Mój zespół przeczyta zgłoszenie i&nbsp;skontaktuje się, żeby umówić rozmowę.</p>
+        </div>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="restart">Nowe zgłoszenie</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ footer.php ============ -->
+<footer class="footer">
+  <div class="wrap footer__row" data-stagger="fade">
+    <a href="#top" class="footer__logo" aria-label="Szymon Masło, strona główna"><img src="assets/logo/szymon-maslo-white.svg" width="150" height="38" alt="" loading="lazy"></a>
+    <nav class="footer__nav" aria-label="Stopka"><a href="#">Współpraca</a><a href="#">Startupy</a><a href="#">O mnie</a><a href="#">Blog</a><a href="#">Kontakt</a></nav>
+    <div class="footer__social"><a href="https://www.linkedin.com/in/szymonmaslo/" rel="noopener" target="_blank">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky" rel="noopener" target="_blank">Instagram</a></div>
+  </div>
+  <div class="wrap footer__bottom"><span>© 2026 Szymon Masło Consulting</span><a href="#">Polityka prywatności</a></div>
+  <div class="footer__giant-box" aria-hidden="true" data-reveal-box><div class="footer__giant"><span>Szymon </span><b>Masło</b></div></div>
+</footer>
+
+</div>
+</div>
+
+<!-- ============ Menu mobilne (PROPOZYCJA do akceptacji) ============ -->
+<dialog class="mmenu" id="mobile-menu" aria-label="Menu">
+  <div class="mmenu__panel">
+    <div class="mmenu__flute flute" aria-hidden="true"></div>
+    <div class="mmenu__top">
+      <a href="#top"><img src="assets/logo/szymon-maslo-white.svg" width="142" height="36" alt="Szymon Masło, strona główna"></a>
+      <button class="mmenu__close" type="button" aria-label="Zamknij menu" data-mmenu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <nav class="mmenu__nav" aria-label="Menu mobilne">
+      <a href="#" style="--i:0">Współpraca <small>01</small></a>
+      <a href="#" style="--i:1">Startupy <small>02</small></a>
+      <a href="#" style="--i:2">O mnie <small>03</small></a>
+      <a href="#" style="--i:3">Blog <small>04</small></a>
+      <a href="#" style="--i:4">Kontakt <small>05</small></a>
+    </nav>
+    <div class="mmenu__foot">
+      <a class="btn" href="#porozmawiajmy">Porozmawiajmy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+      <div class="mmenu__social"><a href="https://www.linkedin.com/in/szymonmaslo/" rel="noopener" target="_blank">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky" rel="noopener" target="_blank">Instagram</a></div>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>

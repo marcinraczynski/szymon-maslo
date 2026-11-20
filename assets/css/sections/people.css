@@ -1,0 +1,35 @@
+/* Sekcja 5: Ludzie, z którymi działam (akordeon opinii) */
+.people__list { display: flex; gap: 14px; height: 640px; }
+.people__card {
+  position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; padding: 0;
+  border-radius: var(--r-card); border: 1px solid var(--line2); background: var(--card);
+  color: var(--text); text-align: left; cursor: pointer;
+  transition: flex-grow .8s var(--ease-out);
+}
+.people__card[aria-pressed="true"] { flex-grow: 2.6; cursor: default; }
+.people__card img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%;
+  filter: grayscale(1) brightness(.55); transition: filter .8s;
+}
+.people__card[aria-pressed="true"] img { filter: grayscale(.1) brightness(.75); }
+.people__placeholder { position: absolute; inset: 0; display: grid; place-items: center; background: radial-gradient(60% 60% at 50% 35%, #2A2621, #12110F); font-size: 120px; font-weight: 100; color: rgba(214,184,138,.5); }
+.people__card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11,10,9,.96) 8%, rgba(11,10,9,.2) 55%, rgba(11,10,9,0)); }
+.people__in { position: absolute; z-index: 1; left: 32px; right: 32px; bottom: 32px; }
+.people__role { display: block; font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+.people__name { display: block; margin-top: 10px; font-size: 22px; font-weight: 600; }
+.people__quote { display: none; margin-top: 22px; font-size: clamp(20px, 1.8vw, 27px); font-weight: 200; line-height: 1.45; quotes: "„" "”"; max-width: 640px; }
+.people__card[aria-pressed="true"] .people__quote { display: block; animation: people-fadeup .7s .2s ease both; }
+@keyframes people-fadeup { from { opacity: 0; transform: translateY(12px); } }
+
+@media (max-width: 1100px) {
+  .people__list { flex-direction: column; height: auto; }
+  .people__card { min-height: 220px; }
+  .people__card[aria-pressed="true"] { min-height: 560px; }
+}
+@media (max-width: 640px) {
+  .people__list { gap: 10px; }
+  .people__card { min-height: 130px; }
+  .people__card[aria-pressed="true"] { min-height: 540px; }
+  .people__in { left: 20px; right: 20px; bottom: 20px; }
+  .people__quote { font-size: 19px; }
+}

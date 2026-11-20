@@ -1,0 +1,99 @@
+/* Reset, typografia, wspólne komponenty (.wrap, .btn, .flute, .dot) */
+html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, blockquote { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: var(--text); }
+a:hover { color: var(--gold-hover); }
+button { font-family: inherit; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.btn:focus-visible { outline-offset: 4px; }
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; z-index: 100; left: 24px; top: -80px;
+  padding: 14px 22px; border-radius: var(--r-pill);
+  background: var(--gold); color: var(--bg); font-size: 13px; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: 24px; color: var(--bg); }
+
+/* ramka strony */
+.site { padding: 14px; overflow-x: clip; }
+.site-frame {
+  position: relative; background: var(--bg);
+  border: 1px solid var(--line2); border-radius: var(--r); overflow: hidden;
+}
+
+.wrap { max-width: var(--wrap-max); margin: 0 auto; padding-inline: var(--wrap-pad); }
+
+/* typografia */
+.eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+.thin { font-weight: 200; letter-spacing: -.025em; }
+.thin b { font-weight: 600; }
+.h2 { font-size: clamp(38px, 4vw, 62px); line-height: 1.04; }
+.lead { font-size: 16px; line-height: 1.7; color: var(--muted); }
+
+/* sekcje */
+.sec { padding: var(--sec-pad) 0; }
+.sec--flush-top { padding-top: 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap; margin-bottom: 56px; }
+.sec-head .lead { max-width: 380px; }
+
+/* fakturowane szkło */
+.flute {
+  -webkit-backdrop-filter: blur(16px) saturate(1.05);
+  backdrop-filter: blur(16px) saturate(1.05);
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.075) 0px, rgba(255,255,255,.015) 9px, rgba(0,0,0,.20) 24px, rgba(255,255,255,.09) 26px),
+    linear-gradient(90deg, rgba(11,10,9,.55), rgba(11,10,9,.25));
+}
+
+/* przyciski */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 16px;
+  min-height: 56px; padding: 0 30px; border-radius: var(--r-pill);
+  background: var(--gold); color: var(--bg); border: 1px solid var(--gold);
+  text-decoration: none; font-family: inherit; font-size: 12px; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase; cursor: pointer;
+  transition: background .4s, color .4s, border-color .4s;
+}
+.btn:hover { background: transparent; color: var(--gold); }
+.btn svg { flex: none; transition: transform .4s; }
+.btn:hover svg { transform: translateX(4px); }
+.btn--ghost { background: rgba(11,10,9,.25); color: var(--text); border-color: rgba(238,232,222,.28); }
+.btn--ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+.tlink {
+  display: inline-flex; align-items: center; gap: 12px; padding-bottom: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  text-decoration: none; color: var(--text); border-bottom: 1px solid var(--line);
+}
+.tlink:hover { color: var(--gold); border-color: var(--gold); }
+
+/* kropki sliderów */
+.dot { display: block; width: 8px; height: 8px; border-radius: 4px; background: rgba(238,232,222,.25); transition: width .4s, background .4s; }
+.dot.is-active { width: 26px; background: var(--gold); }
+
+@media (max-width: 640px) {
+  .site { padding: 8px; }
+  .sec-head { margin-bottom: 32px; gap: 16px; }
+  .h2 { font-size: 34px; line-height: 1.08; }
+  .lead br { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

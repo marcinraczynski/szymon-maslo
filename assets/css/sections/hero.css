@@ -1,0 +1,68 @@
+/* Sekcja 1: Hero */
+.hero { position: relative; height: 960px; overflow: hidden; }
+.hero__bg { position: absolute; inset: 0; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero__photo { position: absolute; bottom: 0; right: 8%; height: 95%; aspect-ratio: 805 / 1439; }
+.hero__photo::before {
+  content: ""; position: absolute; left: -30%; right: -30%; top: 5%; bottom: 10%;
+  background: radial-gradient(50% 50% at 50% 40%, rgba(233,213,168,.22), rgba(233,213,168,0) 70%);
+}
+.hero__photo img {
+  position: relative; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.6));
+}
+.hero__social {
+  position: absolute; z-index: 6; right: clamp(20px, 2.4vw, 36px); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.hero__social a {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; color: var(--text);
+  background: rgba(11,10,9,.35); border: 1px solid rgba(238,232,222,.18);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: border-color .3s, color .3s;
+}
+.hero__social a:hover { border-color: var(--gold); color: var(--gold); }
+.hero__glass { position: absolute; top: 0; bottom: 0; left: 0; width: 44%; border-right: 1px solid rgba(238,232,222,.12); }
+.hero__dim { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11,10,9,.94) 0%, rgba(11,10,9,.5) 20%, rgba(11,10,9,0) 40%); }
+.hero__copy { position: absolute; z-index: 4; left: clamp(24px, 3.4vw, 56px); top: 250px; width: min(540px, 38%); }
+.hero__title { font-size: clamp(46px, 5.4vw, 84px); line-height: 1; }
+.hero__lead { margin-top: 28px; color: var(--text-2); max-width: 420px; }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+
+.hero__cells {
+  position: absolute; z-index: 4; left: 0; right: 0; bottom: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--glass-line);
+}
+.hero__cell {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+  padding: 26px clamp(20px, 2.4vw, 36px) 34px; border-left: 1px solid var(--glass-line);
+  text-decoration: none; color: var(--text); transition: background .4s;
+}
+.hero__cell:first-child { border-left: 0; }
+.hero__cell:hover { background: rgba(214,184,138,.07); color: var(--text); }
+.hero__cell-label { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
+.hero__cell-label svg { opacity: .5; transition: opacity .3s, transform .3s; }
+.hero__cell:hover .hero__cell-label svg { opacity: 1; transform: translate(3px, -3px); }
+.hero__cell-text { font-size: 17px; font-weight: 300; line-height: 1.35; white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  .hero__glass { width: 100%; }
+  .hero__copy { width: auto; right: 24px; }
+  .hero__cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero__cell-text { white-space: normal; }
+}
+@media (max-width: 640px) {
+  .hero { height: auto; display: flex; flex-direction: column; }
+  .hero__photo { position: relative; right: auto; bottom: auto; height: 430px; margin: 0 auto -60px; }
+  .hero__glass { top: auto; bottom: 0; height: 62%; width: 100%; border-right: 0; border-top: 1px solid rgba(238,232,222,.12); }
+  .hero__dim { background: linear-gradient(0deg, rgba(11,10,9,.9) 0%, rgba(11,10,9,.2) 45%, rgba(11,10,9,0) 70%); }
+  .hero__social { top: 100px; right: 16px; transform: none; }
+  .hero__social a { width: 42px; height: 42px; }
+  .hero__copy { position: relative; left: auto; right: auto; top: auto; width: auto; padding: 0 20px 36px; }
+  .hero__title { font-size: 40px; line-height: 1.04; }
+  .hero__lead { margin-top: 20px; font-size: 15px; }
+  .hero__ctas { margin-top: 28px; }
+  .hero__ctas .btn { flex: 1 1 100%; }
+  .hero__cells { position: relative; grid-template-columns: 1fr; }
+  .hero__cell { border-left: 0; border-top: 1px solid var(--glass-line); padding: 18px 20px; gap: 8px; }
+  .hero__cell-text { font-size: 16px; }
+}

@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Szymon Masło – strona główna</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..800&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#050504;color:#EEE8DE;font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#EEE8DE}a:hover{color:#E8D5B2}
+.sm{--bg:#0B0A09;--card:#12110F;--text:#EEE8DE;--muted:#A39B8E;--line:rgba(214,184,138,.22);--line2:rgba(238,232,222,.09);--r:28px;padding:14px;overflow-x:clip}
+.sm *,.sm *::before,.sm *::after{box-sizing:border-box}
+.sm img{display:block;max-width:100%}
+.sm h1,.sm h2,.sm h3,.sm p,.sm ul,.sm ol,.sm figure,.sm blockquote{margin:0;padding:0}
+.sm ul,.sm ol{list-style:none}
+.frame{position:relative;background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:clamp(24px,4vw,56px)}
+.eyebrow{display:block;font-size:11px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.thin{font-weight:200;letter-spacing:-.025em}
+.thin b{font-weight:600}
+.h2{font-size:clamp(38px,4vw,62px);line-height:1.04}
+.lead{font-size:16px;line-height:1.7;color:var(--muted)}
+.sec{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head .lead{max-width:380px}
+.arrow{flex:none}
+
+.flute{-webkit-backdrop-filter:blur(16px) saturate(1.05);backdrop-filter:blur(16px) saturate(1.05);background:repeating-linear-gradient(90deg,rgba(255,255,255,.075) 0px,rgba(255,255,255,.015) 9px,rgba(0,0,0,.20) 24px,rgba(255,255,255,.09) 26px),linear-gradient(90deg,rgba(11,10,9,.55),rgba(11,10,9,.25))}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:56px;padding:0 30px;border-radius:999px;background:var(--gold);color:#0B0A09;text-decoration:none;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);cursor:pointer;transition:background .4s,color .4s}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn svg{transition:transform .4s}
+.btn:hover svg{transform:translateX(4px)}
+.btn.ghost{background:rgba(11,10,9,.25);color:var(--text);border-color:rgba(238,232,222,.28)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* hero */
+.hero{position:relative;height:960px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(../../assets/img/hero-bg-korytarz.jpg) center/cover no-repeat}
+.hero-photo{position:absolute;bottom:0;right:8%;height:95%;aspect-ratio:805/1439}
+.hero-photo::before{content:"";position:absolute;left:-30%;right:-30%;top:5%;bottom:10%;background:radial-gradient(50% 50% at 50% 40%,rgba(233,213,168,.22),rgba(233,213,168,0) 70%)}
+.hero-photo img{position:relative;width:100%;height:100%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+.hero-social{position:absolute;z-index:6;right:clamp(20px,2.4vw,36px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px}
+.hero-social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:var(--text);background:rgba(11,10,9,.35);border:1px solid rgba(238,232,222,.18);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:border-color .3s,color .3s}
+.hero-social a:hover{border-color:var(--gold);color:var(--gold)}
+.hero-glass{position:absolute;top:0;bottom:0;left:0;width:44%;border-right:1px solid rgba(238,232,222,.12)}
+.hero-dim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,10,9,.94) 0%,rgba(11,10,9,.5) 20%,rgba(11,10,9,0) 40%)}
+.topbar{position:absolute;z-index:5;top:0;left:0;right:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:30px clamp(24px,3vw,44px)}
+.topbar > a img{height:34px;width:auto}
+.menu{display:flex;gap:4px;padding:6px;border-radius:999px;background:rgba(11,10,9,.35);border:1px solid rgba(238,232,222,.12);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.menu a{padding:11px 18px;border-radius:999px;font-size:13px;font-weight:500;text-decoration:none;color:rgba(238,232,222,.8);transition:background .3s,color .3s}
+.menu a:hover{background:rgba(238,232,222,.1);color:var(--text)}
+.topbar .btn{justify-self:end;min-height:48px;padding:0 22px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;place-items:center;justify-self:end;color:var(--text);background:rgba(11,10,9,.35);border:1px solid rgba(238,232,222,.18);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hero-copy{position:absolute;z-index:4;left:clamp(24px,3.4vw,56px);top:250px;width:min(540px,38%)}
+.hero h1{font-size:clamp(46px,5.4vw,84px);line-height:1}
+.hero-copy .lead{margin-top:28px;color:#CFC8BC;max-width:420px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.cells{position:absolute;z-index:4;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(238,232,222,.14)}
+.cell{display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:26px clamp(20px,2.4vw,36px) 34px;border-left:1px solid rgba(238,232,222,.14);text-decoration:none;color:var(--text);transition:background .4s}
+.cell:first-child{border-left:0}
+.cell:hover{background:rgba(214,184,138,.07);color:var(--text)}
+.cell small{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.cell small svg{opacity:.5;transition:opacity .3s,transform .3s}
+.cell:hover small svg{opacity:1;transform:translate(3px,-3px)}
+.cell p{font-size:17px;font-weight:300;line-height:1.35;white-space:nowrap}
+.cell p b{font-weight:600}
+
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.b{position:relative;overflow:hidden;border-radius:22px;background:var(--card);border:1px solid var(--line2);transition:border-color .5s}
+.b:hover{border-color:var(--line)}
+.b-art{position:absolute;inset:0}
+.b-art img{position:absolute;right:0;top:0;height:100%;width:auto;min-width:70%;object-fit:cover;object-position:right center;opacity:.9;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.b:hover .b-art img{transform:scale(1.04)}
+.b-art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--card) 18%,rgba(18,17,15,.6) 45%,rgba(18,17,15,0) 70%),linear-gradient(0deg,rgba(18,17,15,.85),rgba(18,17,15,0) 45%)}
+.b-q .b-art::after{background:linear-gradient(90deg,rgba(18,17,15,.75) 10%,rgba(18,17,15,.35) 55%,rgba(18,17,15,0) 80%),linear-gradient(0deg,rgba(18,17,15,.95) 0%,rgba(18,17,15,.7) 40%,rgba(18,17,15,0) 75%)}
+.b-big{grid-column:span 7;min-height:540px}
+.b-photo{grid-column:span 5;min-height:540px}
+.b-q{grid-column:span 3;min-height:300px}
+.b-in{position:absolute;z-index:1;left:36px;right:36px;bottom:34px}
+.b-in small{display:block;font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.b-in .v{display:block;margin-top:14px;font-size:64px;font-weight:200;letter-spacing:-.04em;line-height:.95}
+.b-in .v sup{font-size:.4em;font-weight:300;color:var(--gold);vertical-align:top;margin-left:4px}
+.b-in p{margin-top:12px;font-size:14px;line-height:1.55;color:var(--muted);max-width:230px}
+.b-big .b-in{left:44px;bottom:44px}
+.big-num{display:flex;align-items:flex-start;gap:14px;margin-top:18px}
+.big-num b{font-size:clamp(120px,12vw,190px);font-weight:100;letter-spacing:-.05em;line-height:.8}
+.big-num span{margin-top:.5em;font-size:24px;font-weight:300;color:var(--gold);line-height:1.15}
+.b-big .b-in p{margin-top:24px;font-size:16px;max-width:400px}
+.b-photo img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 10%;transform:scale(1.32);transform-origin:58% 58%}
+.b-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,10,9,.85),rgba(11,10,9,0) 50%)}
+.glass-tag{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;border-radius:16px;background:rgba(18,17,15,.55);border:1px solid rgba(238,232,222,.14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.glass-tag small{display:block;font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.glass-tag b{display:block;margin-top:6px;font-size:17px;font-weight:600}
+.glass-tag{flex-direction:column;align-items:flex-start!important}.glass-tag .logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:18px 28px;padding-top:18px;border-top:1px solid rgba(238,232,222,.14);width:100%}.glass-tag .wm{font-size:17px;font-weight:600;letter-spacing:.14em;color:var(--text)}.glass-tag img{height:24px;width:auto;max-width:100%}
+.b-gold{background:linear-gradient(135deg,#E9D3A8,#C9A46C 55%,#A9864F);border:0;color:#0B0A09}
+.b-gold .b-in small,.b-gold .b-in p{color:rgba(11,10,9,.72)}
+.b-gold .b-in .v{font-size:38px;font-weight:600;letter-spacing:-.01em}
+.b-press{grid-column:span 12;padding:28px 36px;display:flex;align-items:center;gap:28px}
+.b-press small{flex:none;display:flex;align-items:center;gap:12px;padding-right:28px;white-space:nowrap;border-right:1px solid var(--line);font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.b-press small::before{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.b-press div{display:flex;flex:1;justify-content:space-between;gap:18px;min-width:0}
+.b-press span{white-space:nowrap;font-size:12px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(238,232,222,.55)}
+
+/* paths */
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.ptabs{display:flex;gap:4px;padding:6px;border-radius:999px;background:var(--card);border:1px solid var(--line2)}
+.ptab{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:none;border:0;color:var(--muted);font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background .3s,color .3s}
+.ptab small{font-size:11px;font-weight:600;color:var(--gold)}
+.ptab:hover{color:var(--text)}
+.ptab.on{background:var(--gold);color:#0B0A09}
+.ptab.on small{color:#0B0A09}
+.parrows{display:flex;gap:8px}
+.parr{width:52px;height:52px;border-radius:50%;border:1px solid rgba(238,232,222,.2);background:none;color:var(--text);display:grid;place-items:center;cursor:pointer;transition:border-color .3s,color .3s}
+.parr:hover{border-color:var(--gold);color:var(--gold)}
+.slider{margin-top:36px;overflow:hidden;margin-inline:calc(-1 * clamp(24px,4vw,56px))}
+.track{display:flex;transform:translateX(calc(19% - var(--i) * (62% + 24px)));transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.slide{flex:0 0 62%;margin-right:24px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:470px;border-radius:24px;background:var(--card);border:1px solid var(--line2);overflow:hidden;opacity:.28;transform:scale(.94);cursor:pointer;transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),border-color .6s}
+.slide:hover{opacity:.45}
+.slide.on{opacity:1;transform:none;border-color:var(--line);cursor:default}
+.slide-txt{display:flex;flex-direction:column;padding:52px}
+.slide-txt small{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.slide-txt h3{margin-top:22px;font-size:clamp(30px,2.8vw,44px);font-weight:200;letter-spacing:-.025em;line-height:1.08}
+.slide-txt p{margin-top:20px;font-size:17px;line-height:1.65;color:#CFC8BC;max-width:440px}
+.slide-txt .btn{margin-top:auto;align-self:flex-start}
+.slide-vis{position:relative;overflow:hidden;border-left:1px solid var(--line2)}
+.slide-vis .flute{position:absolute;inset:0}
+.path-glow{position:absolute;inset:-10%;opacity:.8}
+.g1{background:radial-gradient(45% 50% at 35% 40%,#D6B88A,rgba(214,184,138,0) 70%)}
+.g2{background:radial-gradient(50% 55% at 65% 35%,#C9A46C,rgba(201,164,108,0) 70%),radial-gradient(30% 40% at 20% 90%,rgba(243,227,195,.6),rgba(243,227,195,0) 70%)}
+.g3{background:radial-gradient(40% 60% at 70% 55%,#E9D3A8,rgba(233,211,168,0) 70%),radial-gradient(30% 40% at 25% 20%,rgba(169,134,79,.8),rgba(169,134,79,0) 70%)}
+.g4{background:conic-gradient(from 200deg at 55% 110%,rgba(214,184,138,0),#D6B88A 30deg,rgba(243,227,195,.9) 60deg,rgba(214,184,138,0) 110deg)}
+.slide-facts{position:absolute;z-index:1;left:28px;right:28px;bottom:28px;display:grid;gap:10px}
+.slide-facts div{padding:18px 22px;border-radius:16px;background:rgba(11,10,9,.55);border:1px solid rgba(238,232,222,.14);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.slide-facts small{display:block;font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.slide-facts b{display:block;margin-top:6px;font-size:19px;font-weight:500;white-space:pre-line}
+.choice span{white-space:pre-line}
+
+
+.stairs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));align-items:end;height:540px}
+.stp{position:relative;display:flex;flex-direction:column;padding:22px 18px 0;border-top:1px solid var(--gold);border-left:1px solid var(--line);background:linear-gradient(180deg,rgba(214,184,138,.12),rgba(214,184,138,.02) 70%,rgba(214,184,138,0));transition:background .5s}
+.stp:hover{background:linear-gradient(180deg,rgba(214,184,138,.22),rgba(214,184,138,.04) 70%,rgba(214,184,138,0))}
+.stp::before{content:"";position:absolute;top:-5px;left:-5px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.stp .yr{font-size:34px;font-weight:100;letter-spacing:-.03em;line-height:1;color:var(--gold)}
+.stp small{margin-top:16px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.stp h3{margin-top:6px;font-size:16px;font-weight:600;line-height:1.25}
+.stp p{margin-top:10px;font-size:13px;line-height:1.5;color:#CFC8BC}
+.stp.top{background:linear-gradient(180deg,rgba(214,184,138,.32),rgba(214,184,138,.06) 70%,rgba(214,184,138,0));box-shadow:0 -30px 80px -30px rgba(214,184,138,.45)}
+.stp.top .yr{font-weight:600}
+.stp.top::before{box-shadow:0 0 0 5px rgba(214,184,138,.2),0 0 22px rgba(214,184,138,.8)}
+.mission{position:relative;margin-top:56px;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.mission-glow{position:absolute;inset:0;background:radial-gradient(40% 120% at 8% 50%,rgba(214,184,138,.55),rgba(214,184,138,0) 70%),radial-gradient(30% 90% at 95% 100%,rgba(169,134,79,.45),rgba(169,134,79,0) 70%),var(--card)}
+.mission-flute{position:absolute;inset:0}
+.mission-in{position:relative;z-index:1;display:grid;grid-template-columns:220px minmax(0,1fr) auto;gap:48px;align-items:center;padding:48px 52px}
+.mission-in img{width:200px;height:auto}
+.mission-in h3{font-size:clamp(24px,2.2vw,34px);line-height:1.2}
+.mission-in p{margin-top:14px;font-size:16px;line-height:1.6;color:#CFC8BC;max-width:560px}
+.stairs-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid var(--line2)}
+.stairs-foot p{font-size:20px;font-weight:200;letter-spacing:-.01em}
+.stairs-foot p b{font-weight:600}
+.tlink{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--text);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.tlink:hover{color:var(--gold);border-color:var(--gold)}
+
+/* people */
+.people{display:flex;gap:14px;height:640px}
+.pp{position:relative;flex:1 1 0;min-width:0;overflow:hidden;border-radius:22px;border:1px solid var(--line2);background:var(--card);padding:0;cursor:pointer;font-family:inherit;color:var(--text);text-align:left;transition:flex-grow .8s cubic-bezier(.2,.8,.2,1)}
+.pp.on{flex-grow:2.6;cursor:default}
+.pp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(1) brightness(.55);transition:filter .8s}
+.pp.on img{filter:grayscale(.1) brightness(.75)}
+.pp-ph{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 35%,#2A2621,#12110F);font-size:120px;font-weight:100;color:rgba(214,184,138,.5)}
+.pp::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,10,9,.96) 8%,rgba(11,10,9,.2) 55%,rgba(11,10,9,0))}
+.pp-in{position:absolute;z-index:1;left:32px;right:32px;bottom:32px}
+.pp-in small{display:block;font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.pp-in b{display:block;margin-top:10px;font-size:22px;font-weight:600}
+.pp-in q{display:none;margin-top:22px;font-size:clamp(20px,1.8vw,27px);font-weight:200;line-height:1.45;quotes:"„" "”";max-width:640px}
+.pp.on .pp-in q{display:block;animation:fadeup .7s .2s ease both}
+@keyframes fadeup{from{opacity:0;transform:translateY(12px)}}
+
+/* apply */
+.apply{position:relative;padding:130px 0;border-top:1px solid var(--line2);background:radial-gradient(40% 60% at 0% 0%,rgba(214,184,138,.14),rgba(214,184,138,0) 70%),var(--bg)}
+.apply-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,6vw,96px);align-items:start}
+.apply h2{margin-top:24px}
+.apply .lead{margin-top:28px;max-width:420px}
+.limit{display:flex;gap:16px;align-items:flex-start;margin-top:44px;padding-top:28px;border-top:1px solid var(--line2);max-width:440px}
+.limit span{flex:none;width:8px;height:8px;margin-top:8px;background:var(--gold);transform:rotate(45deg)}
+.limit p{font-size:15px;line-height:1.65;color:#CFC8BC}
+.alt{margin-top:28px;font-size:14px;color:var(--muted)}
+.alt a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--line)}
+.card{padding:44px 52px 48px;border-radius:24px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;box-shadow:0 40px 100px -50px rgba(214,184,138,.35)}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.card-top small{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.card-top small + small{color:var(--gold)}
+.bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:18px}
+.bar i{height:2px;border-radius:2px;background:rgba(238,232,222,.14);transition:background .5s}
+.bar i.on{background:var(--gold)}
+.stepbox{min-height:460px;display:flex;flex-direction:column;justify-content:center;padding:24px 0 0}
+.q{display:block;margin-top:0;font-size:32px;line-height:1.2;animation:fadeup .5s ease both}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:36px;animation:fadeup .5s .05s ease both}
+.choice{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:76px;padding:0 22px;border-radius:16px;background:rgba(238,232,222,.03);border:1px solid var(--line2);color:var(--text);font-family:inherit;font-size:16px;font-weight:400;text-align:left;cursor:pointer;transition:border-color .3s,background .3s}
+.choice svg{color:var(--gold);flex:none;transition:transform .3s}
+.choice:hover{border-color:var(--gold);background:rgba(214,184,138,.06)}
+.choice:hover svg{transform:translateX(4px)}
+.choice.on{border-color:var(--gold);background:rgba(214,184,138,.1)}
+.field{display:flex;flex-direction:column;gap:6px;margin-top:26px}
+.field span{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(238,232,222,.25);padding:12px 0;color:var(--text);font:inherit;font-size:17px;font-weight:300;outline:none;transition:border-color .3s}
+.field textarea{min-height:150px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--gold)}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.consent{display:flex;gap:14px;align-items:flex-start;margin-top:26px;font-size:13px;line-height:1.6;color:var(--muted)}
+.consent input{width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:#D6B88A}
+.card-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:36px}
+.back{background:none;border:0;padding:12px 0;color:var(--muted);font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.back:hover{color:var(--text)}
+.done h3{margin-top:0;font-size:48px;line-height:1.05}
+.done p{margin-top:22px;font-size:17px;font-weight:300;line-height:1.65;color:#CFC8BC;max-width:440px}
+
+/* newsletter */
+.news{padding:80px 0;border-top:1px solid var(--line2);background:radial-gradient(40% 120% at 100% 50%,rgba(214,184,138,.08),rgba(214,184,138,0) 70%)}
+.news-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.news h2{font-size:clamp(26px,2.4vw,36px);line-height:1.2}
+.news p{margin-top:14px;font-size:15px;line-height:1.6;color:var(--muted)}
+.nl-form{display:flex;align-items:flex-end;gap:12px}
+.nl-form label{flex:1}
+.nl-form input{width:100%;height:56px;background:transparent;border:0;border-bottom:1px solid rgba(238,232,222,.3);color:var(--text);font:inherit;font-size:17px;font-weight:300;outline:none}
+.nl-form input::placeholder{color:#8C857A}
+.nl-form input:focus{border-color:var(--gold)}
+
+/* footer */
+.footer{border-top:1px solid var(--line2)}
+.f-row{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;padding-top:64px;padding-bottom:56px}
+.f-logo img{height:38px;width:auto}
+.f-nav,.f-social{display:flex;gap:36px;flex-wrap:wrap}
+.f-nav a,.f-social a{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:#CFC8BC}
+.f-social a{color:var(--muted)}
+.f-nav a:hover,.f-social a:hover{color:var(--gold)}
+.f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;padding-bottom:28px;border-top:1px solid var(--line2);font-size:12px;color:var(--muted)}
+.f-bottom a{color:var(--muted);text-decoration:none}
+.giant-box{height:min(8.4vw,124px);overflow:hidden;border-top:1px solid var(--line2)}
+.giant{text-align:center;font-size:min(11.2vw,166px);line-height:.95;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;background:linear-gradient(180deg,rgba(233,213,168,.9) 0%,rgba(214,184,138,.35) 55%,rgba(214,184,138,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-top:.08em}
+.giant span{font-weight:200}
+.giant b{font-weight:700}
+
+@media (max-width:1100px){
+  .menu{display:none}
+  .topbar{grid-template-columns:1fr auto}
+  .hero-glass{width:100%}
+  .hero-copy{width:auto;right:24px}
+  .cells{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b-big,.b-photo{grid-column:span 12}
+  .b-q{grid-column:span 6}
+  .slide{flex-basis:86%;grid-template-columns:1fr}.slide-vis{min-height:260px}
+  .mission-in,.news-in{grid-template-columns:1fr}
+  .cell p{white-space:normal}
+  .stairs{grid-template-columns:repeat(4,minmax(0,1fr));height:auto;row-gap:24px}
+  .stp{height:auto!important}
+  .people{flex-direction:column;height:auto}
+  .pp{min-height:220px}.pp.on{min-height:560px}
+  .apply-grid{grid-template-columns:1fr}
+  .choices{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .sm{padding:8px}
+  .frame{border-radius:20px}
+  .wrap{padding-inline:20px}
+  .sec{padding:72px 0}
+  .sec-head{margin-bottom:32px;gap:16px}
+  .h2{font-size:34px;line-height:1.08}
+  .lead br{display:none}
+
+  .hero{height:auto;display:flex;flex-direction:column}
+  .topbar{position:relative;order:-1;grid-template-columns:1fr auto;padding:20px}
+  .topbar > a img{height:30px}
+  .topbar .btn{display:none}
+  .menu-btn{display:grid}
+  .hero-photo{position:relative;right:auto;bottom:auto;height:430px;margin:0 auto -60px}
+  .hero-glass{top:auto;bottom:0;height:62%;width:100%;border-right:0;border-top:1px solid rgba(238,232,222,.12)}
+  .hero-dim{background:linear-gradient(0deg,rgba(11,10,9,.9) 0%,rgba(11,10,9,.2) 45%,rgba(11,10,9,0) 70%)}
+  .hero-social{top:100px;right:16px;transform:none}
+  .hero-social a{width:42px;height:42px}
+  .hero-copy{position:relative;left:auto;right:auto;top:auto;width:auto;padding:0 20px 36px}
+  .hero h1{font-size:40px;line-height:1.04}
+  .hero-copy .lead{margin-top:20px;font-size:15px}
+  .hero-ctas{margin-top:28px}
+  .hero-ctas .btn{flex:1 1 100%}
+  .cells{position:relative;grid-template-columns:1fr}
+  .cell{border-left:0;border-top:1px solid rgba(238,232,222,.14);padding:18px 20px;gap:8px}
+  .cell:first-child{border-left:0}
+  .cell p{white-space:normal;font-size:16px}
+
+  .bento{grid-template-columns:1fr;gap:10px}
+  .b-big,.b-photo,.b-q{grid-column:auto}
+  .b-big{min-height:420px}
+  .b-big .b-in{left:24px;right:24px;bottom:28px}
+  .big-num b{font-size:110px}
+  .big-num span{font-size:20px}
+  .b-photo{min-height:480px}
+  .glass-tag{left:12px;right:12px;bottom:12px;padding:18px}
+  .b-q{min-height:230px}
+  .b-in{left:24px;right:24px;bottom:24px}
+  .b-in .v{font-size:56px}
+  .b-press{flex-direction:column;align-items:flex-start;gap:18px;padding:24px}
+  .b-press small{border-right:0;padding-right:0}
+  .b-press div{flex-wrap:wrap;justify-content:flex-start;gap:10px 22px}
+
+  .ptop{flex-direction:column;align-items:stretch;gap:16px}
+  .ptabs{overflow-x:auto;border-radius:20px;scrollbar-width:none}
+  .ptab{white-space:nowrap;padding:12px 16px;font-size:13px}
+  .parrows{justify-content:flex-end}
+  .slider{margin-inline:-20px;margin-top:24px}
+  .track{transform:translateX(calc(8% - var(--i) * (84% + 12px)))}
+  .slide{flex:0 0 84%;margin-right:12px;grid-template-columns:1fr;min-height:0;transform:scale(.96)}
+  .slide-txt{padding:28px 24px}
+  .slide-txt h3{font-size:28px;margin-top:16px}
+  .slide-txt p{font-size:15px;margin-top:14px}
+  .slide-txt .btn{margin-top:24px;align-self:stretch}
+  .slide-vis{min-height:230px;border-left:0;border-top:1px solid var(--line2)}
+  .slide-facts{left:16px;right:16px;bottom:16px}
+  .slide-facts div{padding:14px 18px}
+  .slide-facts b{font-size:16px}
+
+  .stairs{grid-template-columns:1fr;row-gap:0;height:auto}
+  .stp{height:auto!important;display:grid;grid-template-columns:76px 1fr;column-gap:14px;padding:18px 16px 20px;border-left:0}
+  .stp::before{left:-4px}
+  .stp .yr{grid-row:1 / span 3;font-size:30px}
+  .stp small{margin-top:2px}
+  .mission{margin-top:40px}
+  .mission-in{grid-template-columns:1fr;gap:20px;padding:28px 24px}
+  .mission-in img{width:170px}
+  .mission-in h3 br,.mission-in p br{display:none}
+  .stairs-foot{flex-direction:column;align-items:flex-start;gap:16px}
+  .stairs-foot p{font-size:18px}
+
+  .people{gap:10px}
+  .pp{min-height:130px}
+  .pp.on{min-height:540px}
+  .pp-in{left:20px;right:20px;bottom:20px}
+  .pp-in q{font-size:19px}
+
+  .news{padding:56px 0}
+  .news-in{gap:28px}
+  .nl-form{flex-direction:column;align-items:stretch}
+
+  .apply{padding:72px 0}
+  .apply .lead{margin-top:20px}
+  .limit{margin-top:28px}
+  .card{padding:28px 20px 32px}
+  .card-top{flex-wrap:wrap}
+  .stepbox{min-height:0;padding-top:28px}
+  .q{font-size:26px}
+  .choices{margin-top:24px}
+  .choice{min-height:64px}
+  .row2{grid-template-columns:1fr;gap:0}
+  .card-nav{flex-wrap:wrap}
+
+  .f-row{flex-direction:column;align-items:flex-start;gap:28px;padding-top:48px;padding-bottom:40px}
+  .f-nav{gap:14px 24px}
+  .f-bottom{flex-direction:column;gap:8px}
+  .giant-box{height:12vw}
+  .giant{font-size:13vw}
+}
+.bdots,.pdots,.press-m{display:none}
+.dot{display:block;width:8px;height:8px;border-radius:4px;background:rgba(238,232,222,.25);transition:width .4s,background .4s}
+.dot.on{width:26px;background:var(--gold)}
+@media (max-width:640px){
+  .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-inline:-20px;padding:0 20px;scrollbar-width:none}
+  .bento::-webkit-scrollbar{display:none}
+  .bento > .b{flex:0 0 84%;scroll-snap-align:center;min-height:460px}
+  .bento > .b-press{display:none}
+  .bdots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+  .press-m{display:block;margin-top:32px;padding-top:24px;border-top:1px solid var(--line2)}
+  .press-m small{display:block;font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+  .press-m p{margin-top:12px;font-size:13px;line-height:1.9;letter-spacing:.06em;text-transform:uppercase;color:rgba(238,232,222,.6)}
+  .ptop{display:none}
+  .pdots{display:flex;justify-content:center;gap:4px;margin-top:16px}
+  .pd{width:34px;height:34px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
+  .slider{touch-action:pan-y}
+}
+@media (prefers-reduced-motion:reduce){.sm *{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div class="sm" style="--gold: {{accent}}">
+<div class="frame" id="top">
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-bg"></div>
+  <div class="hero-photo"><img src="../../assets/img/hero-szymon-cutout.webp" alt="Szymon Masło w beżowym garniturze"></div>
+  <div class="hero-glass flute" aria-hidden="true"></div>
+  <div class="hero-dim" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#top" aria-label="Szymon Masło, strona główna"><img src="../../assets/logo/szymon-maslo-white.svg" alt="Szymon Masło"></a>
+    <nav class="menu" aria-label="Główna nawigacja">
+      <a href="#">Współpraca</a>
+      <a href="#">Startupy</a>
+      <a href="#">O mnie</a>
+      <a href="#">Blog</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <a class="btn ghost" href="#porozmawiajmy">Porozmawiajmy</a>
+    <button class="menu-btn" type="button" aria-label="Otwórz menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"></path></svg></button>
+  </header>
+
+  <div class="hero-social"><a href="https://www.linkedin.com/in/szymonmaslo/" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"></path></svg></a><a href="https://www.instagram.com/szymon_maslovsky" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a></div>
+
+  <div class="hero-copy">
+    <h1 class="thin" id="hero-h">Buduję sprzedaż, <b>zespoły i&nbsp;firmy.</b></h1>
+    <p class="lead">Dla founderów i&nbsp;właścicieli firm na wczesnym etapie. Konsultacje, mentoring operacyjny, a&nbsp;przy wybranych projektach partnerstwo.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#porozmawiajmy">Porozmawiajmy <svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></a>
+      <a class="btn ghost" href="#sciezki">Jak pomagam</a>
+    </div>
+  </div>
+
+  <div class="cells">
+    <a class="cell" href="#sciezki"><small>Masz pomysł <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"></path></svg></small><p>Sprawdzę, czy ktoś za to zapłaci.</p></a>
+    <a class="cell" href="#sciezki"><small>Masz firmę <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"></path></svg></small><p>Pomogę jej znów rosnąć.</p></a>
+    <a class="cell" href="#sciezki"><small>Szukasz kapitału <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"></path></svg></small><p>Przygotuję Cię do inwestora.</p></a>
+    <a class="cell" href="#sciezki"><small>Masz startup <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"></path></svg></small><p>Wejdę z&nbsp;Tobą jako partner.</p></a>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="wynik-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2 class="h2 thin" id="wynik-h">Liczby, które <b>stoją za radą.</b></h2></div>
+      <p class="lead">Nie uczę z&nbsp;książek. Uczę tego, co zbudowałem i&nbsp;co działa dziś w&nbsp;moich firmach.</p>
+    </div>
+    <div class="bento" onScroll="{{bscroll}}">
+      <div class="b b-big">
+        <div class="b-art" aria-hidden="true"><img src="../../assets/img/bento-250mln-schody.jpg" alt=""></div>
+        <div class="b-in">
+          <small>Obrót zespołów</small>
+          <div class="big-num" aria-label="250 milionów złotych"><b>250</b><span>mln zł<br>obrotu</span></div>
+          <p>Tyle wygenerowały zespoły sprzedażowe, które zbudowałem w&nbsp;branży OZE.</p>
+        </div>
+      </div>
+      <div class="b b-photo">
+        <img class="ph" src="../../assets/img/bento-szymon-bezowy.webp" alt="Szymon Masło w beżowym garniturze, z założonymi rękami">
+        <div class="glass-tag"><div><small>Dziś</small><b>Doradzam i&nbsp;rozwijam firmy</b></div><div class="logos"><img src="../../assets/logo/neptun-energy-white.svg" alt="Neptun Energy"><img src="../../assets/logo/neptun-sales-white.svg" alt="Neptun Sales"><img src="../../assets/logo/hr-maker-white.svg" alt="HR Maker"><span class="wm">ENERGIO</span></div></div>
+      </div>
+      <div class="b b-q">
+        <div class="b-art" aria-hidden="true"><img src="../../assets/img/bento-12lat-klepsydra.jpg" alt=""></div>
+        <div class="b-in"><small>Doświadczenie</small><span class="v">12<sup>lat</sup></span><p>od pierwszej sprzedaży w&nbsp;terenie do zarządu.</p></div>
+      </div>
+      <div class="b b-q">
+        <div class="b-art" aria-hidden="true"><img src="../../assets/img/bento-handlowcy-siec.jpg" alt=""></div>
+        <div class="b-in"><small>Handlowcy</small><span class="v">1000<sup>+</sup></span><p>przeszkolonych w&nbsp;sprzedaży B2C i&nbsp;B2B.</p></div>
+      </div>
+      <div class="b b-q">
+        <div class="b-art" aria-hidden="true"><img src="../../assets/img/bento-managerowie-krol.jpg" alt=""></div>
+        <div class="b-in"><small>Managerowie</small><span class="v">100<sup>+</sup></span><p>prowadzi dziś własne<br>zespoły i&nbsp;oddziały.</p></div>
+      </div>
+      <div class="b b-q b-gold">
+        <div class="b-in"><small>Dziś pomagam</small><span class="v">Founderom</span><p>zbudować sprzedaż, zespół i&nbsp;model biznesowy firmy.</p></div>
+      </div>
+      <div class="b b-press"><small>W mediach</small><div><span>MamBiznes</span><span>Inwestycje.pl</span><span>Super Biznes</span><span>ESG Trends</span><span>WysokieNapięcie</span><span>Nowa Sprzedaż</span></div></div>
+    </div>
+    <div class="bdots" aria-hidden="true"><sc-for list="{{bdots}}" as="d" hint-placeholder-count="6"><span class="{{d}}"></span></sc-for></div>
+    <div class="press-m"><small>W mediach</small><p>MamBiznes · Inwestycje.pl · Super Biznes · ESG Trends · WysokieNapięcie · Nowa Sprzedaż</p></div>
+  </div>
+</section>
+
+<section class="sec" id="sciezki" aria-labelledby="sciezki-h" style="padding-top: 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2 class="h2 thin" id="sciezki-h">Gdzie jesteś <b>dzisiaj?</b></h2></div>
+      <p class="lead">Cztery sytuacje, cztery sposoby pracy.<br>Wybierz swoją, a&nbsp;resztę ustalimy w&nbsp;rozmowie.</p>
+    </div>
+    <div class="ptop">
+      <div class="ptabs" role="tablist" aria-label="Twoja sytuacja">
+        <sc-for list="{{paths}}" as="p" hint-placeholder-count="4">
+          <button type="button" role="tab" class="{{p.tabCls}}" aria-selected="{{p.pressed}}" onClick="{{p.pick}}"><small>{{p.no}}</small>{{p.label}}</button>
+        </sc-for>
+      </div>
+      <div class="parrows">
+        <button type="button" class="parr" aria-label="Poprzednia ścieżka" onClick="{{prev}}"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M18 5H2M6 1L2 5l4 4"></path></svg></button>
+        <button type="button" class="parr" aria-label="Następna ścieżka" onClick="{{next2}}"><svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></button>
+      </div>
+    </div>
+    <div class="slider" onTouchStart="{{ts}}" onTouchEnd="{{te}}">
+      <div class="track" style="--i: {{pathIdx}}">
+        <sc-for list="{{paths}}" as="p" hint-placeholder-count="4">
+          <article class="{{p.cls}}" onClick="{{p.pick}}">
+            <div class="slide-txt">
+              <small>{{p.no}} · {{p.label}}</small>
+              <h3>{{p.title}}</h3>
+              <p>{{p.desc}}</p>
+              <a class="btn" href="#porozmawiajmy" onClick="{{p.apply}}">Porozmawiajmy <svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></a>
+            </div>
+            <div class="slide-vis" aria-hidden="true">
+              <div class="{{p.glow}}"></div><div class="flute"></div>
+              <div class="slide-facts"><div><small>Format</small><b>{{p.format}}</b></div><div><small>Efekt</small><b>{{p.result}}</b></div></div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+    <div class="pdots" role="group" aria-label="Wybierz ścieżkę">
+      <sc-for list="{{paths}}" as="p" hint-placeholder-count="4"><button type="button" class="pd" aria-label="{{p.label}}" aria-pressed="{{p.pressed}}" onClick="{{p.pick}}"><span class="{{p.dotCls}}"></span></button></sc-for>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="droga-h" style="padding-top: 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2 class="h2 thin" id="droga-h">Przeszedłem każdy szczebel.<br><b>Dlatego wiem, co działa.</b></h2></div>
+      <p class="lead">Od sprzedaży w&nbsp;terenie po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.</p>
+    </div>
+    <ol class="stairs">
+      <sc-for list="{{steps}}" as="s" hint-placeholder-count="8">
+        <li class="{{s.cls}}" style="height: {{s.h}}"><span class="yr">{{s.year}}</span><small>{{s.role}}</small><h3>{{s.name}}</h3><p>{{s.gain}}</p></li>
+      </sc-for>
+    </ol>
+    <div class="mission">
+      <div class="mission-glow" aria-hidden="true"></div><div class="flute mission-flute" aria-hidden="true"></div>
+      <div class="mission-in">
+        <img src="../../assets/logo/fundacja-razem-w-walce-white.svg" alt="Fundacja Razem w Walce">
+        <div>
+          <h3 class="thin">Sukces mierzę nie tylko liczbami,<br><b>ale też wpływem na ludzi.</b></h3>
+          <p>Od 2025 tworzę projekty Fundacji Razem w&nbsp;Walce,<br>która wspiera dzieci chore onkologicznie.</p>
+        </div>
+        <a class="btn ghost" href="#">Poznaj fundację</a>
+      </div>
+    </div>
+    <div class="stairs-foot">
+      <p>Całą tę drogę <b>dostajesz we współpracy.</b></p>
+      <a class="tlink" href="#">Pełna historia <svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="opinie-h" style="padding-top: 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2 class="h2 thin" id="opinie-h">Ludzie, z&nbsp;którymi <b>działam.</b></h2></div>
+      <p class="lead">Kliknij osobę, żeby przeczytać, co mówi.</p>
+    </div>
+    <div class="people">
+      <sc-for list="{{people}}" as="p" hint-placeholder-count="3">
+        <button type="button" class="{{p.cls}}" aria-pressed="{{p.pressed}}" onClick="{{p.pick}}">
+          <sc-if value="{{p.img}}" hint-placeholder-val="{{ true }}"><img src="{{p.img}}" alt="{{p.name}}"></sc-if>
+          <sc-if value="{{p.noImg}}" hint-placeholder-val="{{ false }}"><span class="pp-ph" aria-hidden="true">S</span></sc-if>
+          <span class="pp-in"><small>{{p.role}}</small><b>{{p.name}}</b><q>{{p.quote}}</q></span>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section class="news" aria-labelledby="news-h">
+  <div class="wrap news-in">
+    <div><h2 class="thin" id="news-h">Newsletter co 2&nbsp;tygodnie.<br><b>Bez lania wody.</b></h2><p>Sprzedaż, zarządzanie i&nbsp;leadership w&nbsp;krótkich mailach, które piszę sam.</p></div>
+    <div class="nl-form">
+      <label><span style="position: absolute; width: 1px; height: 1px; overflow: hidden">Adres e-mail</span><input type="email" placeholder="Twój e-mail" autocomplete="email"></label>
+      <button class="btn" type="button">Zapisz się</button>
+    </div>
+  </div>
+</section>
+
+<section class="apply" id="porozmawiajmy" aria-labelledby="apply-h">
+  <div class="wrap apply-grid">
+    <div>
+            <h2 class="h2 thin" id="apply-h">Porozmawiajmy o&nbsp;<b>Twojej firmie.</b></h2>
+      <p class="lead">Cztery krótkie pytania. Mój zespół czyta każde zgłoszenie i&nbsp;umawia rozmowę, jeśli widzimy,<br>że mogę pomóc.</p>
+      <div class="limit"><span aria-hidden="true"></span><p>Pracuję z&nbsp;maksymalnie trzema nowymi firmami w&nbsp;miesiącu. Gdy miejsca się skończą, trafisz na listę rezerwową.</p></div>
+    </div>
+    <div class="card">
+      <div class="card-top"><small>{{stepLabel}}</small><small>{{chosen}}</small></div>
+      <div class="bar" aria-hidden="true"><sc-for list="{{bar}}" as="b" hint-placeholder-count="4"><i class="{{b}}"></i></sc-for></div>
+      <sc-if value="{{s1}}" hint-placeholder-val="{{ true }}"><div class="stepbox">
+        <h3 class="q thin">Na jakim etapie <b>jesteś?</b></h3>
+        <div class="choices">
+          <sc-for list="{{stageOpts}}" as="o" hint-placeholder-count="4">
+            <button type="button" class="{{o.cls}}" onClick="{{o.pick}}"><span>{{o.label}}</span><svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></button>
+          </sc-for>
+        </div>
+      </div></sc-if>
+      <sc-if value="{{s2}}" hint-placeholder-val="{{ false }}"><div class="stepbox">
+        <h3 class="q thin">Co dziś najbardziej <b>blokuje wzrost?</b></h3>
+        <label class="field"><span>Kilka zdań wystarczy</span><textarea></textarea></label>
+        <div class="card-nav"><button class="back" type="button" onClick="{{back}}">Wstecz</button><button class="btn" type="button" onClick="{{next}}">Dalej</button></div>
+      </div></sc-if>
+      <sc-if value="{{s3}}" hint-placeholder-val="{{ false }}"><div class="stepbox">
+        <h3 class="q thin">Jakiej współpracy <b>szukasz?</b></h3>
+        <div class="choices">
+          <sc-for list="{{formOpts}}" as="o" hint-placeholder-count="4">
+            <button type="button" class="{{o.cls}}" onClick="{{o.pick}}">{{o.label}}<svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></button>
+          </sc-for>
+        </div>
+        <div class="card-nav"><button class="back" type="button" onClick="{{back}}">Wstecz</button></div>
+      </div></sc-if>
+      <sc-if value="{{s4}}" hint-placeholder-val="{{ false }}"><div class="stepbox">
+        <h3 class="q thin">Jak możemy <b>się odezwać?</b></h3>
+        <label class="field"><span>Imię i nazwisko</span><input type="text" autocomplete="name"></label>
+        <div class="row2">
+          <label class="field"><span>E-mail</span><input type="email" autocomplete="email"></label>
+          <label class="field"><span>Telefon</span><input type="tel" autocomplete="tel"></label>
+        </div>
+        <label class="consent"><input type="checkbox"><span>Zgadzam się na kontakt w&nbsp;sprawie zgłoszenia. Szczegóły w&nbsp;<a href="#">polityce prywatności</a>.</span></label>
+        <div class="card-nav"><button class="back" type="button" onClick="{{back}}">Wstecz</button><button class="btn" type="button" onClick="{{next}}">Wyślij</button></div>
+      </div></sc-if>
+      <sc-if value="{{s5}}" hint-placeholder-val="{{ false }}"><div class="stepbox">
+        <div class="done"><h3 class="thin">Dziękuję. <b>Odezwiemy się.</b></h3><p>Mój zespół przeczyta zgłoszenie i&nbsp;skontaktuje się, żeby umówić rozmowę.</p></div>
+        <div class="card-nav"><button class="back" type="button" onClick="{{restart}}">Nowe zgłoszenie</button></div>
+      </div></sc-if>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap f-row">
+    <a href="#top" class="f-logo" aria-label="Szymon Masło, strona główna"><img src="../../assets/logo/szymon-maslo-white.svg" alt="Szymon Masło"></a>
+    <nav class="f-nav" aria-label="Stopka"><a href="#">Współpraca</a><a href="#">Startupy</a><a href="#">O mnie</a><a href="#">Blog</a><a href="#">Kontakt</a></nav>
+    <div class="f-social"><a href="https://www.linkedin.com/in/szymonmaslo/">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky">Instagram</a></div>
+  </div>
+  <div class="wrap f-bottom"><span>© 2026 Szymon Masło Consulting</span><a href="#">Polityka prywatności</a></div>
+  <div class="giant-box" aria-hidden="true"><div class="giant"><span>Szymon </span><b>Masło</b></div></div>
+</footer>
+
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#D6B88A","options":["#D6B88A","#C8A46E","#E4D3B4","#B89566"]},"$preview":{"width":1440,"height":6900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { q: 0, step: 1, stage: null, form: null, path: 1, bi: 0 };
+  }
+  renderVals() {
+    const st = this.state;
+    const go = (patch) => this.setState(patch);
+    const paths = [
+      { label: 'Masz pomysł', title: 'Sprawdzimy, czy ktoś za to zapłaci.', desc: 'Patrzę na pomysł oczami sprzedawcy, zanim wydasz na niego pieniądze.', format: 'Konsultacja, 90 minut', result: 'Plan pierwszej sprzedaży' },
+      { label: 'Masz firmę', title: 'Pomożemy firmie znów rosnąć.', desc: 'Strategia, model biznesowy, zespół i Twoja rola lidera. Najwyższy poziom to współpraca 1:1 ze mną.', format: 'Mentoring, 1–3 miesiące', result: 'Firma, która rośnie\nbez Ciebie' },
+      { label: 'Szukasz kapitału', title: 'Wejdziesz na rozmowę przygotowany.', desc: 'Model, liczby i narracja, które bronią się w pierwszych minutach. Kapitału za Ciebie nie pozyskuję.', format: 'Przygotowanie do inwestora', result: 'Model, liczby i narracja' },
+      { label: 'Masz startup', title: 'Wchodzę w wybrane projekty.', desc: 'Firmy po pierwszych płacących klientach, przed skalą. Buduję z Wami sprzedaż od środka.', format: 'Partnerstwo operacyjne', result: 'Odpowiedź do 10 dni roboczych' }
+    ];
+    const years = [
+      ['2013', 'Pierwsza firma', 'Waves Wear', 'Marka od zera'],
+      ['2014', 'Teren', 'Sprzedaż bankowa', 'Rozmowy, które kończą się decyzją'],
+      ['2016', 'Własne call center', 'Terminale płatnicze', 'Zespół sprzedaży od podstaw'],
+      ['2018', 'Dyrektor krajowy', 'Columbus Elite', 'Sieć sprzedaży w całej Polsce'],
+      ['2019', 'Członek zarządu', 'Supreme Energy', 'Strategia i ekspansja w OZE'],
+      ['2021', 'Prezes zarządu', 'Neptun Energy', '250 mln zł sprzedaży w OZE'],
+      ['2025', 'Rekrutacja', 'HR Maker', 'Pozyskiwanie specjalistów'],
+      ['Dziś', 'Buduję', 'Energio', 'Platforma dla rynku OZE']
+    ];
+    const people = [
+      { name: 'Paweł Żygowski', role: 'Klub Biznesowy', img: '../../assets/img/people/pawel-zygowski.jpg',
+        quote: 'W obu tych światach pokazał jedno – jest konkretny, zdecydowany i skuteczny. W biznesie nie ma u niego miejsca na przypadkowość. Ma jasną wizję, potrafi ją wdrożyć i egzekwować.' },
+      { name: 'Paweł Swinarski', role: 'Przedsiębiorca, youtuber', img: '../../assets/img/people/pawel-swinarski.jpg',
+        quote: '[Cytat do uzupełnienia: 2–3 zdania o współpracy z Szymonem.]' },
+      { name: 'Kuba Midel', role: 'Klub Aktywny Rentier', img: '../../assets/img/people/kuba-midel.jpg',
+        quote: 'W sprzedaży i zarządzaniu zespołami widziałem, że ma naturalny instynkt przywódcy – ludzie chcą za nim iść. Jeśli ktoś szuka partnera, który potrafi dowozić efekty w realnym biznesie, to Szymon jest właściwym człowiekiem.' }
+    ];
+    const nb = (t) => t.replace(/(^|\s)([aiouwzAIOUWZ])\s/g, '$1$2 ');
+    paths.forEach((p) => { p.title = nb(p.title); p.desc = nb(p.desc); p.result = nb(p.result); });
+    years.forEach((y) => { y[3] = nb(y[3]); });
+    people.forEach((p) => { p.quote = nb(p.quote); });
+    const stageLabels = ['Mam pomysł', 'Mam działającą firmę', 'Szukam kapitału', 'Mam startup\nz klientami'];
+    const formLabels = ['Konsultacja', 'Mentoring', 'Wejście w projekt', 'Jeszcze nie wiem'];
+    return {
+      accent: this.props.accent ?? '#D6B88A',
+      paths: paths.map((p, i) => ({ ...p, no: '0' + (i + 1), glow: 'path-glow g' + (i + 1),
+        cls: i === st.path ? 'slide on' : 'slide', dotCls: i === st.path ? 'dot on' : 'dot', tabCls: i === st.path ? 'ptab on' : 'ptab', pressed: i === st.path ? 'true' : 'false',
+        pick: () => { if (st.path !== i) go({ path: i }); }, apply: () => go({ stage: i, step: 2 }) })),
+      pathIdx: st.path,
+      bdots: [0, 1, 2, 3, 4, 5].map((i) => (i === st.bi ? 'dot on' : 'dot')),
+      bscroll: (e) => { const el = e.currentTarget; const c = el.firstElementChild; const w = c ? c.offsetWidth + 10 : 1; const i = Math.round(el.scrollLeft / w); if (i !== this.state.bi) this.setState({ bi: i }); },
+      ts: (e) => { this._tx = e.touches[0].clientX; },
+      te: (e) => { const dx = e.changedTouches[0].clientX - (this._tx || 0); if (dx < -40) go({ path: (st.path + 1) % 4 }); else if (dx > 40) go({ path: (st.path + 3) % 4 }); },
+      prev: () => go({ path: (st.path + 3) % 4 }),
+      next2: () => go({ path: (st.path + 1) % 4 }),
+      steps: years.map((y, i) => ({ year: y[0], role: y[1], name: y[2], gain: y[3], h: (230 + i * 44) + 'px', cls: i === 7 ? 'stp top' : 'stp' })),
+      people: people.map((p, i) => ({ ...p, noImg: !p.img, cls: i === st.q ? 'pp on' : 'pp', pressed: i === st.q ? 'true' : 'false', pick: () => go({ q: i }) })),
+      stepLabel: st.step <= 4 ? 'Krok ' + st.step + ' z 4' : 'Wysłane',
+      chosen: st.stage === null ? '' : stageLabels[st.stage],
+      bar: [1, 2, 3, 4].map((n) => (n <= st.step ? 'on' : '')),
+      s1: st.step === 1, s2: st.step === 2, s3: st.step === 3, s4: st.step === 4, s5: st.step === 5,
+      stageOpts: stageLabels.map((label, i) => ({ label, cls: st.stage === i ? 'choice on' : 'choice', pick: () => go({ stage: i, step: 2 }) })),
+      formOpts: formLabels.map((label, i) => ({ label, cls: st.form === i ? 'choice on' : 'choice', pick: () => go({ form: i, step: 4 }) })),
+      next: () => go({ step: Math.min(5, st.step + 1) }),
+      back: () => go({ step: Math.max(1, st.step - 1) }),
+      restart: () => go({ step: 1, stage: null, form: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
