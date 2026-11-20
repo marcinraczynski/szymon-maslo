@@ -16,7 +16,7 @@ export function initPeople(root, { people, initial = 0 }) {
       <span class="people__in">
         <small class="people__role">${esc(p.role)}</small>
         <b class="people__name">${esc(p.name)}</b>
-        <q class="people__quote">${t(p.quote)}</q>
+        <span class="people__quote-wrap"><q class="people__quote">${t(p.quote)}</q></span>
       </span>
     </button>`).join('');
 

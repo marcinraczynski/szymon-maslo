@@ -126,8 +126,7 @@ html:not(.motion) .scroll-progress { display: none; }
 }
 
 /* ======================= 5. LUDZIE ======================= */
-@keyframes kenburns { from { transform: scale(1.12); } }
-.motion .people__card[aria-pressed="true"] img { animation: kenburns 6s cubic-bezier(.2, .8, .2, 1) both; }
+/* zoom zdjęcia robi zwykłe przejście w people.css (bez skoku przy kliknięciu) */
 
 /* ======================= 6. NEWSLETTER ======================= */
 .newsletter__field { position: relative; }
