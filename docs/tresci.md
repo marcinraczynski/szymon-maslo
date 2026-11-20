@@ -57,9 +57,9 @@ Pod spodem: Całą tę drogę **dostajesz we współpracy.** / link **Pełna his
 
 ## 5. Ludzie, z którymi **działam.**
 Lead: Kliknij osobę, żeby przeczytać, co mówi.
-- **Paweł Żygowski** · Klub Biznesowy · „W obu tych światach pokazał jedno – jest konkretny, zdecydowany i skuteczny. W biznesie nie ma u niego miejsca na przypadkowość. Ma jasną wizję, potrafi ją wdrożyć i egzekwować.”
-- **Paweł Swinarski** · Przedsiębiorca, youtuber · [Cytat do uzupełnienia: 2–3 zdania o współpracy z Szymonem.]
-- **Kuba Midel** · Klub Aktywny Rentier · „W sprzedaży i zarządzaniu zespołami widziałem, że ma naturalny instynkt przywódcy – ludzie chcą za nim iść. Jeśli ktoś szuka partnera, który potrafi dowozić efekty w realnym biznesie, to Szymon jest właściwym człowiekiem.”
+- **Paweł Żygowski** · Klub Biznesowy · „W obu tych światach pokazał jedno: jest konkretny, zdecydowany i skuteczny. W biznesie nie ma u niego miejsca na przypadkowość. Ma jasną wizję, potrafi ją wdrożyć i egzekwować.”
+- **Paweł Swinarski** · Przedsiębiorca, youtuber · „Z Szymonem budujemy HR Maker. Szybko przechodzi od pomysłu do działania, a ludzie wokół niego zawsze wiedzą, za co odpowiadają. Na takiego wspólnika się stawia.” (ROBOCZY, do akceptacji przez Pawła)
+- **Kuba Midel** · Klub Aktywny Rentier · „W sprzedaży i zarządzaniu zespołami widziałem, że ma naturalny instynkt przywódcy. Ludzie chcą za nim iść. Jeśli ktoś szuka partnera, który potrafi dowozić efekty w realnym biznesie, to Szymon jest właściwym człowiekiem.”
 
 Domyślnie rozwinięta pierwsza osoba.
 
@@ -82,7 +82,7 @@ Logo · Współpraca, Startupy, O mnie, Blog, Kontakt · LinkedIn, Instagram · 
 ## Do potwierdzenia przez klienta
 - Liczby: 250 mln zł, 12 lat (liczone od 2014), 1000+ handlowców, 100+ managerów. Pochodzą z dawnej strony („tysiące”, „setki”).
 - Limit 3 nowych firm w miesiącu (z dawnej strony).
-- Cytat i pisownia nazwiska Pawła Swinarskiego.
+- Cytat (roboczy, napisany na podstawie HR Maker) i pisownia nazwiska Pawła Swinarskiego.
 - Logo Energio.
 - Adresy stron Neptun Energy, Energio, Fundacji (linki to na razie `#`).
 - Zdjęcie hero w wyższej rozdzielczości (obecne: 805 × 1439 px, wycięte z tła).

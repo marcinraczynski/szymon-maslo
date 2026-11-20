@@ -31,6 +31,7 @@ export function splitWords(el) {
     });
   };
   walk(el);
+  el.classList.add('is-split');
 }
 
 function setStaggerIndexes(container) {
@@ -86,10 +87,13 @@ export function initMotion() {
   const hero = document.querySelector('.hero');
   if (hero) {
     setStaggerIndexes(hero.querySelector('.hero__cells'));
-    requestAnimationFrame(() => {
+    // Intro startuje, gdy font jest gotowy (max 1,2 s), żeby tekst nie mignął fontem zastępczym.
+    const start = () => requestAnimationFrame(() => {
       hero.classList.add('is-in');
       hero.querySelectorAll('[data-split]').forEach((h) => h.classList.add('is-in'));
     });
+    const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+    Promise.race([fontsReady, new Promise((r) => setTimeout(r, 1200))]).then(start);
   }
 
   // ----- paralaksa hero + pasek postępu (jeden handler, rAF) -----

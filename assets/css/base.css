@@ -45,6 +45,10 @@ button { font-family: inherit; }
 .h2 { font-size: clamp(38px, 4vw, 62px); line-height: 1.04; }
 .lead { font-size: 16px; line-height: 1.7; color: var(--muted); }
 
+/* łamanie linii: równe wiersze w nagłówkach, bez wiszących pojedynczych słów w akapitach */
+h1, h2, h3, .paths__title, .apply__q { text-wrap: balance; }
+p, q, dd, .lead { text-wrap: pretty; }
+
 /* sekcje */
 .sec { padding: var(--sec-pad) 0; }
 .sec--flush-top { padding-top: 0; }

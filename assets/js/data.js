@@ -29,11 +29,12 @@ export const career = [
 /** Sekcja 5: opinie. `img` bez rozszerzenia: komponent dokłada warianty -600/-900.webp. */
 export const people = [
   { name: 'Paweł Żygowski', role: 'Klub Biznesowy', img: 'assets/img/people/pawel-zygowski',
-    quote: 'W obu tych światach pokazał jedno – jest konkretny, zdecydowany i skuteczny. W biznesie nie ma u niego miejsca na przypadkowość. Ma jasną wizję, potrafi ją wdrożyć i egzekwować.' },
+    quote: 'W obu tych światach pokazał jedno: jest konkretny, zdecydowany i skuteczny. W biznesie nie ma u niego miejsca na przypadkowość. Ma jasną wizję, potrafi ją wdrożyć i egzekwować.' },
   { name: 'Paweł Swinarski', role: 'Przedsiębiorca, youtuber', img: 'assets/img/people/pawel-swinarski',
-    quote: '[Cytat do uzupełnienia: 2–3 zdania o współpracy z Szymonem.]' },
+    // ROBOCZY cytat (na podstawie wspólnego projektu HR Maker ze starej strony). Do akceptacji przez Pawła Swinarskiego przed publikacją.
+    quote: 'Z Szymonem budujemy HR Maker. Szybko przechodzi od pomysłu do działania, a ludzie wokół niego zawsze wiedzą, za co odpowiadają. Na takiego wspólnika się stawia.' },
   { name: 'Kuba Midel', role: 'Klub Aktywny Rentier', img: 'assets/img/people/kuba-midel',
-    quote: 'W sprzedaży i zarządzaniu zespołami widziałem, że ma naturalny instynkt przywódcy – ludzie chcą za nim iść. Jeśli ktoś szuka partnera, który potrafi dowozić efekty w realnym biznesie, to Szymon jest właściwym człowiekiem.' }
+    quote: 'W sprzedaży i zarządzaniu zespołami widziałem, że ma naturalny instynkt przywódcy. Ludzie chcą za nim iść. Jeśli ktoś szuka partnera, który potrafi dowozić efekty w realnym biznesie, to Szymon jest właściwym człowiekiem.' }
 ];
 export const peopleDefault = 0;
 
