@@ -76,3 +76,35 @@
 .mmenu[open] .mmenu__panel { animation: mmenu-in .35s var(--ease-out) both; }
 @keyframes mmenu-in { from { opacity: 0; transform: translateY(-8px); } }
 html.is-menu-open { overflow: hidden; }
+
+/* ===== Pasek po przewinięciu (pokazuje się, gdy hero zniknie z ekranu) ===== */
+.stickybar {
+  position: fixed; z-index: 40; top: 22px; left: 0; right: 0; pointer-events: none;
+  transform: translate3d(0, -140%, 0); opacity: 0;
+  transition: transform .6s var(--ease-out), opacity .4s ease;
+}
+.stickybar.is-shown { transform: none; opacity: 1; }
+.stickybar__in {
+  pointer-events: auto;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px;
+  max-width: 1320px; margin: 0 auto; padding: 8px 8px 8px 26px;
+  border-radius: var(--r-pill); border: 1px solid rgba(238,232,222,.12);
+  background: rgba(11,10,9,.72);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1); backdrop-filter: blur(14px) saturate(1.1);
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,.7);
+}
+.stickybar .topbar__logo img { height: 28px; }
+/* jedno szkło na cały pasek: menu w środku bez własnego blura */
+.stickybar .topbar__nav { padding: 0; background: none; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.stickybar .topbar__nav a { padding: 10px 16px; }
+.stickybar .topbar__cta { min-height: 44px; }
+.stickybar .topbar__menu-btn { width: 44px; height: 44px; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (max-width: 1360px) { .stickybar { padding-inline: 28px; } }
+@media (max-width: 1100px) { .stickybar__in { grid-template-columns: 1fr auto; } }
+@media (max-width: 640px) {
+  .stickybar { top: 14px; padding-inline: 14px; }
+  .stickybar__in { padding: 6px 6px 6px 18px; }
+  .stickybar .topbar__logo img { height: 26px; }
+  .stickybar .topbar__cta { display: inline-flex; min-height: 40px; padding: 0 14px; font-size: 10px; letter-spacing: .14em; }
+  .stickybar .topbar__menu-btn { width: 40px; height: 40px; }
+}
