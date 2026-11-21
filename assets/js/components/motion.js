@@ -73,9 +73,15 @@ export function initMotion() {
     });
   }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
 
-  document.querySelectorAll('[data-reveal], [data-stagger], [data-split], [data-reveal-box]').forEach((el) => {
+  document.querySelectorAll('[data-reveal], [data-stagger], [data-split]').forEach((el) => {
     if (!el.closest('.hero')) reveal.observe(el);
   });
+  // Elementy na samym dole strony (napis w stopce) nigdy nie wejdą w strefę z ujemnym marginesem,
+  // więc mają własny observer bez marginesu.
+  const revealEdge = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); revealEdge.unobserve(e.target); } });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('[data-reveal-box]').forEach((el) => revealEdge.observe(el));
 
   // ----- sekcje widoczne (pauzowanie animacji w pętli poza ekranem) -----
   const visible = new IntersectionObserver((entries) => {
