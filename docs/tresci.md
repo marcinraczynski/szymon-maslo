@@ -20,7 +20,7 @@ Social: LinkedIn https://www.linkedin.com/in/szymonmaslo/ · Instagram https://w
 - Lead: Nie uczę z książek. Uczę tego, co zbudowałem i co działa dziś w moich firmach.
 - **250 mln zł obrotu** (etykieta: Obrót zespołów): Tyle wygenerowały zespoły sprzedażowe, które zbudowałem w branży OZE.
 - Zdjęcie + szklany podpis: Dziś / **Doradzam i rozwijam firmy**. Logotypy 2×2: Neptun Energy, Neptun Sales, HR Maker, ENERGIO (napis, logo w drodze).
-- **12 lat** (Doświadczenie): od pierwszej sprzedaży w terenie do zarządu.
+- **12 lat** (Doświadczenie): w budowaniu sprzedaży, zespołów i firm.
 - **1000+** (Handlowcy): przeszkolonych w sprzedaży B2C i B2B.
 - **100+** (Managerowie): prowadzi dziś własne zespoły i oddziały.
 - Złota karta: Dziś pomagam / **Founderom** / zbudować sprzedaż, zespół i model biznesowy firmy.
@@ -44,7 +44,7 @@ Lead: Od sprzedaży w terenie po zarząd spółki. Każdy etap to doświadczenie
 | Rok | Rola | Firma | Linia |
 |---|---|---|---|
 | 2013 | Pierwsza firma | Waves Wear | Marka od zera |
-| 2014 | Teren | Sprzedaż bankowa | Rozmowy, które kończą się decyzją |
+| 2014 | Sprzedaż | Sprzedaż bankowa | Rozmowy, które kończą się decyzją |
 | 2016 | Własne call center | Terminale płatnicze | Zespół sprzedaży od podstaw |
 | 2018 | Dyrektor krajowy | Columbus Elite | Sieć sprzedaży w całej Polsce |
 | 2019 | Członek zarządu | Supreme Energy | Strategia i ekspansja w OZE |

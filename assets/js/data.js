@@ -17,7 +17,7 @@ export const pathsDefault = 1; // domyślnie aktywna karta 02
 /** Sekcja 4: oś kariery (schody). Ostatni element jest podświetlony. */
 export const career = [
   { year: '2013', role: 'Pierwsza firma', name: 'Waves Wear', gain: 'Marka od zera' },
-  { year: '2014', role: 'Teren', name: 'Sprzedaż bankowa', gain: 'Rozmowy, które kończą się decyzją' },
+  { year: '2014', role: 'Sprzedaż', name: 'Sprzedaż bankowa', gain: 'Rozmowy, które kończą się decyzją' },
   { year: '2016', role: 'Własne call center', name: 'Terminale płatnicze', gain: 'Zespół sprzedaży od podstaw' },
   { year: '2018', role: 'Dyrektor krajowy', name: 'Columbus Elite', gain: 'Sieć sprzedaży w całej Polsce' },
   { year: '2019', role: 'Członek zarządu', name: 'Supreme Energy', gain: 'Strategia i ekspansja w OZE' },
