@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Startupy – Szymon Masło</title>
+<meta name="description" content="Wchodzę w wybrane startupy po pierwszych płacących klientach, przed skalą. Buduję z założycielami sprzedaż od środka.">
+<meta name="robots" content="noindex, nofollow"><!-- wersja do akceptacji: usuń przy publikacji -->
+<meta name="theme-color" content="#050504">
+<meta property="og:title" content="Startupy – Szymon Masło">
+<meta property="og:description" content="Wchodzę w wybrane startupy po pierwszych płacących klientach, przed skalą. Buduję z założycielami sprzedaż od środka.">
+<meta property="og:image" content="../assets/img/og.jpg">
+<link rel="icon" href="../assets/logo/oryginaly/logo-512.png">
+
+<!-- Font: na start Google Fonts, docelowo self-hosted woff2 (latin-ext) w assets/fonts + preload -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..800&amp;display=swap">
+
+<!-- LCP: zdjęcie w hero podstrony -->
+<link rel="preload" as="image" type="image/webp" href="../assets/img/podstrony/startupy-hero-1400.webp" imagesrcset="../assets/img/podstrony/startupy-hero-800.webp 800w, ../assets/img/podstrony/startupy-hero-1400.webp 1400w" imagesizes="(max-width: 640px) 100vw, 60vw" fetchpriority="high">
+
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/sections/header.css">
+<link rel="stylesheet" href="../assets/css/sections/hero.css">
+<link rel="stylesheet" href="../assets/css/sections/subhero.css">
+<link rel="stylesheet" href="../assets/css/sections/seek.css">
+<link rel="stylesheet" href="../assets/css/sections/sectors.css">
+<link rel="stylesheet" href="../assets/css/sections/pillars.css">
+<link rel="stylesheet" href="../assets/css/sections/process.css">
+<link rel="stylesheet" href="../assets/css/sections/band.css">
+<link rel="stylesheet" href="../assets/css/sections/apply.css">
+<link rel="stylesheet" href="../assets/css/sections/faq.css">
+<link rel="stylesheet" href="../assets/css/sections/footer.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+<script>
+  /* Animacje tylko z JS i bez prefers-reduced-motion. Bezpiecznik: gdy main.js się nie wczyta w 3 s, pokaż wszystko. */
+  (function (h) {
+    h.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('motion');
+    setTimeout(function () { if (!h.classList.contains('motion-ready')) h.classList.remove('motion'); }, 3000);
+  })(document.documentElement);
+</script>
+<script type="module" src="../assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<div class="site">
+<div class="site-frame" id="top">
+
+<!-- ============ template-part: startupy/hero (+ header.php) ============ -->
+<section class="hero hero--sub hero--startupy" aria-labelledby="hero-h" data-section="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="../assets/img/hero-bg-korytarz-1280.webp" srcset="../assets/img/hero-bg-korytarz-768.webp 768w, ../assets/img/hero-bg-korytarz-1280.webp 1280w, ../assets/img/hero-bg-korytarz-1920.webp 1920w" sizes="(max-width: 640px) 200vw, 100vw" width="1920" height="1080" alt="" decoding="async">
+  </div>
+  <div class="hero__shot">
+    <img src="../assets/img/podstrony/startupy-hero-1400.webp" srcset="../assets/img/podstrony/startupy-hero-800.webp 800w, ../assets/img/podstrony/startupy-hero-1400.webp 1400w" sizes="(max-width: 640px) 100vw, 60vw" width="1400" height="1400" alt="Szymon Masło w granatowym garniturze, z założonymi rękami" fetchpriority="high">
+  </div>
+  <div class="hero__glass flute" aria-hidden="true"></div>
+  <div class="hero__dim" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="topbar__logo" href="../" aria-label="Szymon Masło, strona główna"><img src="../assets/logo/szymon-maslo-white.svg" width="142" height="36" alt=""></a>
+    <nav class="topbar__nav" aria-label="Główna nawigacja">
+      <a href="../wspolpraca/">Współpraca</a>
+      <a href="../startupy/" aria-current="page">Startupy</a>
+      <a href="../o-mnie/">O mnie</a>
+      <a href="#">Blog</a>
+      <a href="../kontakt/">Kontakt</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--ghost topbar__cta" href="#zglos">Porozmawiajmy</a>
+      <button class="topbar__menu-btn" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu" data-mmenu-open><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg></button>
+    </div>
+  </header>
+
+  <div class="hero__social">
+    <a href="https://www.linkedin.com/in/szymonmaslo/" aria-label="LinkedIn" rel="noopener" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></a>
+    <a href="https://www.instagram.com/szymon_maslovsky" aria-label="Instagram" rel="noopener" target="_blank"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+
+  <div class="hero__copy" id="tresc">
+    <nav class="hero__crumb crumb" aria-label="Okruszki"><ol><li><a href="../">Strona główna</a></li><li><span aria-current="page">Startupy</span></li></ol></nav>
+    <h1 class="hero__title thin" id="hero-h" data-split>Wchodzę w&nbsp;wybrane <br><b>projekty.</b></h1>
+    <p class="hero__lead lead">Dla startupów po pierwszych płacących klientach, przed skalą. Nie kończę na radach. Buduję z&nbsp;założycielami sprzedaż od środka.</p>
+  </div>
+  <nav class="hero__cells" aria-label="Na skróty">
+    <a class="hero__cell" href="#kogo"><span class="hero__cell-label">Etap <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Po pierwszych klientach</span></a>
+    <a class="hero__cell" href="#co-wnosze"><span class="hero__cell-label">Moja rola <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Partner operacyjny</span></a>
+    <a class="hero__cell" href="#zglos"><span class="hero__cell-label">Zgłoszenie <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Sześć pytań, bez kwoty</span></a>
+    <a class="hero__cell" href="#proces"><span class="hero__cell-label">Odpowiedź <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></span><span class="hero__cell-text">Do 10 dni roboczych</span></a>
+  </nav>
+</section>
+
+<main>
+<!-- ============ template-part: startupy/seek ============ -->
+<section class="sec" id="kogo" aria-labelledby="kogo-h" data-section="seek">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="kogo-h" data-split>Kogo <b>szukam?</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Wchodzę w&nbsp;kilka projektów, w&nbsp;których mogę realnie zmienić wynik sprzedaży.</p>
+    </div>
+    <div class="seek" data-stagger="scale">
+      <div class="seek__card seek__card--yes">
+        <div class="glow glow--2" aria-hidden="true"></div><div class="flute" aria-hidden="true"></div>
+        <div class="seek__in">
+          <small>Szukam</small>
+          <h3 class="seek__title">Firm po pierwszych płacących klientach, <b>przed skalą.</b></h3>
+          <ul class="seek__list" data-stagger style="--delay:.4s">
+            <li>Produkt jest sprawdzony, a&nbsp;klienci płacą</li>
+            <li>Sprzedaż opiera się na założycielach i&nbsp;nie da się jej powtórzyć</li>
+            <li>Chcecie zbudować zespół i&nbsp;proces, które sprzedają bez Was</li>
+          </ul>
+        </div>
+      </div>
+      <div class="seek__card seek__card--no">
+        <div class="seek__in">
+          <small>Nie szukam</small>
+          <h3 class="seek__title">Pomysłów i&nbsp;prototypów <b>bez sprzedaży.</b></h3>
+          <p class="seek__text">Jeśli masz dopiero pomysł, zacznij od konsultacji. W&nbsp;90 minut sprawdzimy, czy ktoś za niego zapłaci.</p>
+          <a class="tlink" href="../wspolpraca/#pomysl">Konsultacja dla pomysłów <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/sectors ============ -->
+<section class="sec sec--flush-top" aria-labelledby="branze-h" data-section="sectors">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="branze-h" data-split>Branże, w&nbsp;których <b>mam przewagę.</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Tam, gdzie sam budowałem firmy i&nbsp;zespoły sprzedażowe.</p>
+    </div>
+    <div class="sectors" data-stagger="scale">
+      <div class="sectors__item"><span class="sectors__n" aria-hidden="true">01</span><h3>Sprzedaż bezpośrednia B2C i&nbsp;B2B</h3><p>Od własnego call center po ogólnopolską sieć handlowców.</p></div>
+      <div class="sectors__item"><span class="sectors__n" aria-hidden="true">02</span><h3>Energetyka i&nbsp;OZE</h3><p>Supreme Energy, Neptun Energy, a&nbsp;dziś Energio.</p></div>
+      <div class="sectors__item"><span class="sectors__n" aria-hidden="true">03</span><h3>Rekrutacja i&nbsp;HR</h3><p>HR Maker: pozyskiwanie i&nbsp;rozwój specjalistów.</p></div>
+      <div class="sectors__item"><span class="sectors__n" aria-hidden="true">04</span><h3>Marketplace’y i&nbsp;platformy usługowe</h3><p>Energio: platforma, która zmienia sprzedaż na rynku OZE.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/bring ============ -->
+<section class="sec sec--flush-top" id="co-wnosze" aria-labelledby="bring-h" data-section="bring">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="bring-h" data-split>Co wnoszę <b>do projektu?</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Nie zostawiam prezentacji. Pracuję z&nbsp;Wami operacyjnie, aż sprzedaż działa bez założycieli.</p>
+    </div>
+    <div class="pillars" data-stagger="fade">
+      <div class="pillars__item"><small>Sprzedaż</small><h3>Proces, który da się powtórzyć</h3><p>Od pierwszego kontaktu do podpisanej umowy, z&nbsp;liczbami na każdym etapie.</p></div>
+      <div class="pillars__item"><small>Zespół</small><h3>Handlowcy i&nbsp;liderzy</h3><p>Rekrutacja, szkolenie i&nbsp;struktura zespołu, który dowozi wynik.</p></div>
+      <div class="pillars__item"><small>Model</small><h3>Liczby, które się bronią</h3><p>Na czym zarabiacie, ile kosztuje klient i&nbsp;jak skalować bez przepalania pieniędzy.</p></div>
+      <div class="pillars__item"><small>Doświadczenie</small><h3>Ktoś, kto już to przeszedł</h3><p>Od handlowca po zarząd spółki, która sprzedała za ponad 250 mln zł.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/process ============ -->
+<section class="sec sec--flush-top" id="proces" aria-labelledby="proc-h" data-section="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 thin" id="proc-h" data-split>Jak wygląda <b>selekcja?</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Każde zgłoszenie dostaje odpowiedź, niezależnie od decyzji.</p>
+    </div>
+    <ol class="process" data-stagger="process">
+      <li class="process__step"><span class="process__n">01</span><h3>Zgłoszenie</h3><p>Sześć pytań o&nbsp;firmę, klientów i&nbsp;to, czego brakuje do skali. Bez podawania kwoty.</p><div class="process__res"><div><small>Czas</small><p>Ok. 10 minut</p></div></div></li>
+      <li class="process__step"><span class="process__n">02</span><h3>Wstępna selekcja</h3><p>Zgłoszenie czyta mój zespół i&nbsp;sprawdza, czy projekt pasuje do etapu i&nbsp;branży.</p><div class="process__res"><div><small>Kto</small><p>Mój zespół</p></div></div></li>
+      <li class="process__step"><span class="process__n">03</span><h3>Odpowiedź</h3><p>Wracamy z&nbsp;decyzją. Jeśli to nie ten moment, powiemy dlaczego.</p><div class="process__res"><div><small>Termin</small><p>Do 10 dni roboczych</p></div></div></li>
+      <li class="process__step"><span class="process__n">04</span><h3>Rozmowa ze mną</h3><p>Spotykamy się, jeśli widzimy wspólny kierunek, i&nbsp;ustalamy zasady współpracy.</p><div class="process__res"><div><small>Efekt</small><p>Decyzja o&nbsp;wejściu w&nbsp;projekt</p></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/band ============ -->
+<section class="band" aria-label="Zasada" data-section="band">
+  <div class="band__bg" aria-hidden="true"><img src="../assets/img/hero-bg-korytarz-1280.webp" srcset="../assets/img/hero-bg-korytarz-768.webp 768w, ../assets/img/hero-bg-korytarz-1280.webp 1280w, ../assets/img/hero-bg-korytarz-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+  <div class="band__shade" aria-hidden="true"></div>
+  <div class="wrap">
+    <small class="eyebrow" data-reveal="fade">Zasada</small>
+    <p class="band__text thin" data-split>Nie szukam pomysłów. Szukam firm, które już sprzedają <b>i&nbsp;chcą sprzedawać więcej.</b></p>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/apply (formularz startupowy, konfiguracja: data.js → startupForm) ============ -->
+<section class="apply" id="zglos" aria-labelledby="apply-h" data-section="apply" data-apply-config="startup">
+  <div class="wrap apply__grid">
+    <div data-stagger style="--delay:.1s">
+      <h2 class="apply__title h2 thin" id="apply-h">Zgłoś <b>swój projekt.</b></h2>
+      <p class="apply__lead lead">Sześć krótkich pytań. Nie pytam o&nbsp;kwotę ani o&nbsp;prezentację dla inwestorów.</p>
+      <div class="apply__limit"><span aria-hidden="true"></span><p>Odpowiadamy na każde zgłoszenie w&nbsp;ciągu 10 dni roboczych, niezależnie od decyzji.</p></div>
+    </div>
+
+    <form data-reveal="scale" style="--delay:.25s" class="apply__card" data-apply-form data-source="startupy" data-endpoint="" novalidate aria-labelledby="apply-h">
+      <div class="apply__card-top" aria-live="polite"><small data-apply-step-label>Krok 1 z&nbsp;4 · Firma</small><small data-apply-chosen></small></div>
+      <div class="apply__bar" data-apply-bar aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+
+      <div class="apply__step" data-apply-step="1">
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Opowiedz <b>o&nbsp;firmie.</b></h3>
+        <div class="apply__row2">
+          <label class="apply__field"><span>1. Nazwa firmy</span><input type="text" name="company_name" autocomplete="organization"></label>
+          <label class="apply__field"><span>2. Strona WWW</span><input type="url" name="website" placeholder="https://" autocomplete="url"></label>
+        </div>
+        <fieldset class="apply__fs">
+          <legend>3. Branża</legend>
+          <div class="apply__choices" data-apply-choices="sector"></div>
+        </fieldset>
+        <div class="apply__nav apply__nav--end"><button class="btn" type="button" data-apply-nav="next">Dalej</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="2" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Co już <b>sprzedajecie?</b></h3>
+        <label class="apply__field"><span>4. Co sprzedajecie i&nbsp;komu</span><textarea name="offer" placeholder="Kilka zdań wystarczy"></textarea></label>
+        <fieldset class="apply__fs">
+          <legend>5. Ilu macie płacących klientów?</legend>
+          <div class="apply__choices apply__choices--four" data-apply-choices="clients"></div>
+        </fieldset>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="button" data-apply-nav="next">Dalej</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="3" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Czego brakuje <b>do skali?</b></h3>
+        <label class="apply__field"><span>6. Co dziś blokuje wzrost sprzedaży</span><textarea name="blocker" placeholder="Proces, zespół, model, coś innego?"></textarea></label>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="button" data-apply-nav="next">Dalej</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="4" hidden>
+        <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Jak możemy <b>się odezwać?</b></h3>
+        <label class="apply__field"><span>Imię i&nbsp;nazwisko</span><input type="text" name="full_name" autocomplete="name" required data-validate="name" aria-describedby="startup-err-name"><em class="apply__error" id="startup-err-name" data-apply-error="full_name"></em></label>
+        <div class="apply__row2">
+          <label class="apply__field"><span>E-mail</span><input type="email" name="email" autocomplete="email" required data-validate="email" aria-describedby="startup-err-email"><em class="apply__error" id="startup-err-email" data-apply-error="email"></em></label>
+          <label class="apply__field"><span>Telefon</span><input type="tel" name="phone" autocomplete="tel" required data-validate="phone" aria-describedby="startup-err-phone"><em class="apply__error" id="startup-err-phone" data-apply-error="phone"></em></label>
+        </div>
+        <div class="apply__consent-wrap">
+          <label class="apply__consent"><input type="checkbox" name="consent" required data-validate="consent" aria-describedby="startup-err-consent"><span>Zgadzam się na kontakt w&nbsp;sprawie zgłoszenia. Szczegóły w&nbsp;<a href="#">polityce prywatności</a>.</span></label>
+          <em class="apply__error" id="startup-err-consent" data-apply-error="consent"></em>
+        </div>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="submit">Wyślij zgłoszenie</button></div>
+      </div>
+
+      <div class="apply__step" data-apply-step="done" hidden>
+        <div class="apply__done">
+          <h3 class="apply__done-title thin" tabindex="-1" data-apply-heading>Dziękuję. <b>Odezwiemy się.</b></h3>
+          <p class="apply__done-text">Mój zespół przeczyta zgłoszenie i&nbsp;wróci z&nbsp;odpowiedzią w&nbsp;ciągu 10 dni roboczych.</p>
+        </div>
+        <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="restart">Nowe zgłoszenie</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ template-part: startupy/faq (pytania z data.js → faq.startupy) ============ -->
+<section class="sec faq" aria-labelledby="faq-h" data-faq="startupy" data-section="faq">
+  <div class="wrap faq__grid">
+    <div class="faq__side">
+      <h2 class="h2 thin" id="faq-h" data-split>Pytania <b>founderów.</b></h2>
+      <p class="lead" data-reveal style="--delay:.25s">Nie ma tu Twojego pytania? Dopisz je w&nbsp;zgłoszeniu.</p>
+    </div>
+    <div class="faq__list" data-faq-list data-stagger="fade"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ footer.php ============ -->
+<footer class="footer">
+  <div class="wrap footer__row" data-stagger="fade">
+    <a href="../" class="footer__logo" aria-label="Szymon Masło, strona główna"><img src="../assets/logo/szymon-maslo-white.svg" width="150" height="38" alt="" loading="lazy"></a>
+    <nav class="footer__nav" aria-label="Stopka"><a href="../wspolpraca/">Współpraca</a><a href="../startupy/" aria-current="page">Startupy</a><a href="../o-mnie/">O mnie</a><a href="#">Blog</a><a href="../kontakt/">Kontakt</a></nav>
+    <div class="footer__social"><a href="https://www.linkedin.com/in/szymonmaslo/" rel="noopener" target="_blank">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky" rel="noopener" target="_blank">Instagram</a></div>
+  </div>
+  <div class="wrap footer__bottom"><span>© 2026 Szymon Masło Consulting</span><a href="#">Polityka prywatności</a></div>
+  <div class="footer__giant-box" aria-hidden="true" data-reveal-box><div class="footer__giant"><span>Szymon </span><b>Masło</b></div></div>
+</footer>
+
+</div>
+</div>
+
+<!-- ============ Pasek po przewinięciu (header.php, wariant sticky) ============ -->
+<div class="stickybar" data-stickybar>
+  <div class="stickybar__in">
+    <a class="topbar__logo" href="../" aria-label="Szymon Masło, strona główna"><img src="../assets/logo/szymon-maslo-white.svg" width="142" height="36" alt=""></a>
+    <nav class="topbar__nav" aria-label="Nawigacja w pasku">
+      <a href="../wspolpraca/">Współpraca</a>
+      <a href="../startupy/" aria-current="page">Startupy</a>
+      <a href="../o-mnie/">O mnie</a>
+      <a href="#">Blog</a>
+      <a href="../kontakt/">Kontakt</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn topbar__cta" href="#zglos">Porozmawiajmy</a>
+      <button class="topbar__menu-btn" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu" data-mmenu-open><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ Menu mobilne ============ -->
+<dialog class="mmenu" id="mobile-menu" aria-label="Menu">
+  <div class="mmenu__panel" tabindex="-1" autofocus>
+    <div class="mmenu__flute flute" aria-hidden="true"></div>
+    <div class="mmenu__top">
+      <a href="../"><img src="../assets/logo/szymon-maslo-white.svg" width="142" height="36" alt="Szymon Masło, strona główna"></a>
+      <button class="mmenu__close" type="button" aria-label="Zamknij menu" data-mmenu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <nav class="mmenu__nav" aria-label="Menu mobilne">
+      <a href="../wspolpraca/" style="--i:0">Współpraca <small>01</small></a>
+      <a href="../startupy/" aria-current="page" style="--i:1">Startupy <small>02</small></a>
+      <a href="../o-mnie/" style="--i:2">O mnie <small>03</small></a>
+      <a href="#" style="--i:3">Blog <small>04</small></a>
+      <a href="../kontakt/" style="--i:4">Kontakt <small>05</small></a>
+    </nav>
+    <div class="mmenu__foot">
+      <a class="btn" href="#zglos">Porozmawiajmy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+      <div class="mmenu__social"><a href="https://www.linkedin.com/in/szymonmaslo/" rel="noopener" target="_blank">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky" rel="noopener" target="_blank">Instagram</a></div>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>

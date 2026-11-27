@@ -63,9 +63,12 @@ export function initMotion() {
 
   // ----- reveal -----
   const reveal = new IntersectionObserver((entries) => {
+    let seq = 0;
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
+      // Rozdziały osi (O mnie), które wchodzą na ekran razem, pojawiają się jeden po drugim.
+      if (el.dataset.reveal === 'chapter') el.style.setProperty('--delay', `${(seq++) * 0.16}s`);
       el.classList.add('is-in');
       el.querySelectorAll('[data-count]').forEach(animateCount);
       if (el.matches('[data-count]')) animateCount(el);
@@ -92,7 +95,8 @@ export function initMotion() {
   // ----- intro hero -----
   const hero = document.querySelector('.hero');
   if (hero) {
-    setStaggerIndexes(hero.querySelector('.hero__cells'));
+    const cells = hero.querySelector('.hero__cells');
+    if (cells) setStaggerIndexes(cells);
     // Intro startuje, gdy font jest gotowy (max 1,2 s), żeby tekst nie mignął fontem zastępczym.
     const start = () => requestAnimationFrame(() => {
       hero.classList.add('is-in');

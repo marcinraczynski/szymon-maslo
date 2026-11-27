@@ -1,0 +1,26 @@
+/* /wspolpraca/: Czy to brzmi znajomo? */
+.pains__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.pains__card {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; min-height: 360px;
+  padding: 120px 30px 40px; border-radius: var(--r-card); background: var(--card); border: 1px solid var(--line2); overflow: hidden;
+  transition: border-color .5s;
+}
+.pains__card:hover { border-color: var(--line); }
+.pains__card::before {
+  content: ""; position: absolute; right: -40%; top: -40%; width: 90%; height: 90%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(214,184,138,.16), rgba(214,184,138,0));
+}
+.pains__q { position: absolute; top: 22px; left: 26px; font-size: 110px; font-weight: 200; line-height: 1; color: var(--gold); transform: translateY(-40%); }
+.pains__card p { position: relative; font-size: 19px; font-weight: 300; line-height: 1.5; }
+.pains__card b { font-weight: 600; }
+.pains__foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line2); }
+.pains__foot p { font-size: 18px; font-weight: 200; }
+.pains__foot b { font-weight: 600; }
+
+@media (max-width: 1100px) {
+  .pains__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .pains__grid { grid-template-columns: 1fr; }
+  .pains__card { min-height: 0; gap: 24px; padding: 96px 24px 32px; }
+}

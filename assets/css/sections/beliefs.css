@@ -1,0 +1,28 @@
+/* /o-mnie/: W co wierzę (zdjęcie + trzy przekonania) */
+.beliefs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 820px; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); }
+.beliefs__photo { position: relative; overflow: hidden; }
+.beliefs__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; filter: saturate(.4) brightness(.72) sepia(.1); }
+.beliefs__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,10,9,0) 55%, var(--bg) 100%), linear-gradient(0deg, rgba(11,10,9,.5), rgba(11,10,9,0) 40%); }
+.beliefs__body { display: flex; flex-direction: column; justify-content: center; padding: 110px clamp(24px, 5vw, 80px) 110px clamp(32px, 4vw, 64px); }
+.beliefs__list { margin-top: 120px; border-top: 1px solid var(--line2); }
+.beliefs__list li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 30px 0; border-bottom: 1px solid var(--line2); }
+.beliefs__n { padding-top: 10px; font-size: 13px; font-weight: 600; letter-spacing: .2em; color: var(--gold); }
+.beliefs__list h3 { font-size: clamp(30px, 2.8vw, 42px); font-weight: 200; letter-spacing: -.02em; line-height: 1.1; transition: color .4s; }
+.beliefs__list li:hover h3 { color: var(--gold); }
+.beliefs__list p { margin-top: 10px; font-size: 16px; line-height: 1.65; color: var(--muted); }
+.beliefs__end { margin-top: 110px; font-size: clamp(22px, 2vw, 30px); line-height: 1.35; }
+
+@media (max-width: 1100px) {
+  .beliefs { grid-template-columns: 1fr; min-height: 0; }
+  .beliefs__photo { height: 440px; }
+  .beliefs__photo::after { background: linear-gradient(0deg, var(--bg) 0%, rgba(11,10,9,0) 50%); }
+  .beliefs__list { margin-top: 56px; }
+  .beliefs__end { margin-top: 56px; }
+}
+@media (max-width: 640px) {
+  .beliefs__photo { height: 320px; }
+  .beliefs__body { padding: 40px 20px 64px; }
+  .beliefs__list { margin-top: 32px; }
+  .beliefs__list li { grid-template-columns: 44px minmax(0, 1fr); padding: 24px 0; }
+  .beliefs__end { margin-top: 40px; }
+}

@@ -22,11 +22,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      # Publikujemy tylko front: bez docs/ i bez oryginałów z assets/source/
+      # Publikujemy tylko front (strona główna + podstrony): bez docs/ i bez oryginałów z assets/source/
       - name: Przygotuj _site
         run: |
           mkdir -p _site
-          cp index.html _site/
+          cp index.html robots.txt _site/
+          cp -r wspolpraca startupy o-mnie kontakt _site/
           cp -r assets _site/assets
           rm -rf _site/assets/source
           touch _site/.nojekyll

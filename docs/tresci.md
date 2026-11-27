@@ -39,7 +39,7 @@ Lead: Cztery sytuacje, cztery sposoby pracy. Wybierz swoją, a resztę ustalimy 
 Przycisk w karcie: **Porozmawiajmy**. Domyślnie aktywna karta 02.
 
 ## 4. Przeszedłem każdy szczebel. **Dlatego wiem, co działa.**
-Lead: Od sprzedaży w terenie po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.
+Lead: Od handlowca po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.
 
 | Rok | Rola | Firma | Linia |
 |---|---|---|---|

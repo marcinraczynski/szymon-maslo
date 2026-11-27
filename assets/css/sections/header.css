@@ -15,6 +15,8 @@
   text-decoration: none; color: rgba(238,232,222,.8); transition: background .3s, color .3s;
 }
 .topbar__nav a:hover { background: rgba(238,232,222,.1); color: var(--text); }
+/* bieżąca strona: aria-current="page" (w WP wp_nav_menu ustawia to samo) */
+.topbar__nav a[aria-current="page"] { background: rgba(238,232,222,.1); color: var(--text); }
 .topbar__actions { justify-self: end; display: flex; align-items: center; gap: 10px; }
 .topbar__cta { min-height: 48px; padding: 0 22px; }
 .topbar__menu-btn {
@@ -66,7 +68,7 @@
   font-size: clamp(30px, 8vw, 44px); font-weight: 200; letter-spacing: -.025em; line-height: 1.1; text-decoration: none; color: var(--text);
 }
 .mmenu__nav a small { font-size: 11px; font-weight: 600; letter-spacing: .26em; color: var(--gold); }
-.mmenu__nav a:hover { color: var(--gold); }
+.mmenu__nav a:hover, .mmenu__nav a[aria-current="page"] { color: var(--gold); }
 .mmenu__foot { position: relative; display: flex; flex-direction: column; gap: 20px; padding: 24px 28px 32px; }
 .mmenu__foot .btn { width: 100%; }
 .mmenu__social { display: flex; gap: 28px; }

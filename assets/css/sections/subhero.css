@@ -1,0 +1,47 @@
+/* Hero podstrony (.hero.hero--sub): wspólne z hero strony głównej tło, szkło, menu, social i komórki.
+   Różni się zdjęciem z maską (.hero__shot), okruszkami i wysokością. */
+.hero--sub { height: 760px; }
+.hero--sub .hero__bg { opacity: .85; }
+.hero__shot {
+  position: absolute; top: 0; bottom: 0; right: 0; width: 60%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 35%); mask-image: linear-gradient(90deg, transparent 0%, #000 35%);
+}
+.hero__shot img { width: 100%; height: 100%; object-fit: cover; object-position: var(--shot-pos, 55% 25%); filter: var(--shot-filter, saturate(.35) brightness(.8)); }
+.hero--sub .hero__glass { width: 46%; }
+.hero--sub .hero__copy { top: 220px; width: min(600px, 42%); }
+.hero--sub .hero__title { margin-top: 28px; font-size: clamp(44px, 5vw, 78px); line-height: 1.02; }
+.hero--sub .hero__lead { margin-top: 26px; max-width: 460px; }
+.hero--sub .hero__cell-text { font-size: 16px; }
+
+/* okruszki */
+.crumb ol { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.crumb li { display: flex; gap: 10px; align-items: center; }
+.crumb li + li::before { content: "/"; color: var(--gold); }
+.crumb a { color: var(--muted); text-decoration: none; }
+.crumb a:hover { color: var(--gold); }
+.crumb [aria-current] { color: var(--text-2); }
+
+/* warianty zdjęć */
+.hero--startupy { --shot-pos: 50% 20%; }
+.hero--kontakt { --shot-pos: 60% 22%; }
+.hero--about { --shot-pos: 62% 28%; --shot-filter: saturate(.3) brightness(.78) sepia(.12); height: 720px; }
+.hero--about .hero__copy { top: 230px; }
+/* złota linia pod hero O mnie */
+.hero--about::after {
+  content: ""; position: absolute; z-index: 6; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, rgba(214,184,138,0), var(--gold) 15%, var(--gold) 85%, rgba(214,184,138,0));
+}
+
+@media (max-width: 1100px) {
+  .hero--sub .hero__glass { width: 100%; }
+  .hero--sub .hero__copy { width: auto; right: 24px; }
+}
+@media (max-width: 640px) {
+  .hero--sub, .hero--about { height: auto; }
+  .hero__shot {
+    position: relative; width: 100%; height: 340px;
+    -webkit-mask-image: linear-gradient(0deg, transparent, #000 40%); mask-image: linear-gradient(0deg, transparent, #000 40%);
+  }
+  .hero--sub .hero__copy, .hero--about .hero__copy { top: auto; right: auto; width: auto; margin-top: -60px; padding-bottom: 36px; }
+  .hero--sub .hero__title { font-size: 38px; margin-top: 22px; }
+}

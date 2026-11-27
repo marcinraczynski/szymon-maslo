@@ -1,0 +1,13 @@
+/* Karta CTA (/o-mnie/: Porozmawiajmy o Twojej firmie) */
+.cta-box { position: relative; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+.cta-box .glow { inset: -20%; }
+.cta-box .flute { position: absolute; inset: 0; }
+.cta-box__in { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; padding: 80px 64px; }
+.cta-box__title { font-size: clamp(36px, 4vw, 60px); line-height: 1.05; }
+.cta-box__btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .cta-box__in { padding: 40px 24px; gap: 28px; }
+  .cta-box__title { font-size: 34px; }
+  .cta-box__btns, .cta-box__btns .btn { width: 100%; }
+}

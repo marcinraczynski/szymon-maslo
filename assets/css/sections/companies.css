@@ -1,0 +1,19 @@
+/* /o-mnie/: Firmy i projekty, które rozwijam */
+.companies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.companies__item { display: flex; flex-direction: column; min-height: 300px; padding: 36px 32px; border-radius: var(--r-card); background: var(--card); border: 1px solid var(--line2); transition: border-color .5s; }
+.companies__item:hover { border-color: var(--line); }
+.companies__logo { height: 44px; display: flex; align-items: center; }
+.companies__logo img { height: 30px; width: auto; max-width: 100%; }
+.companies__wordmark { font-size: 24px; font-weight: 600; letter-spacing: .14em; }
+.companies__item small { margin-top: auto; padding-top: 48px; font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+.companies__item p { margin-top: 10px; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.companies__item--now { background: radial-gradient(80% 80% at 100% 0%, rgba(214,184,138,.2), rgba(214,184,138,0) 70%), var(--card); border-color: var(--line); }
+
+@media (max-width: 1100px) {
+  .companies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .companies { grid-template-columns: 1fr; }
+  .companies__item { min-height: 0; padding: 30px 24px; }
+  .companies__item small { padding-top: 32px; }
+}

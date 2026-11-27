@@ -5,7 +5,7 @@
 .footer__nav, .footer__social { display: flex; gap: 36px; flex-wrap: wrap; }
 .footer__nav a, .footer__social a { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; color: var(--text-2); }
 .footer__social a { color: var(--muted); }
-.footer__nav a:hover, .footer__social a:hover { color: var(--gold); }
+.footer__nav a:hover, .footer__social a:hover, .footer__nav a[aria-current="page"] { color: var(--gold); }
 .footer__bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; padding-bottom: 28px; border-top: 1px solid var(--line2); font-size: 12px; color: var(--muted); }
 .footer__bottom a { color: var(--muted); text-decoration: none; }
 .footer__bottom a:hover { color: var(--gold); }
