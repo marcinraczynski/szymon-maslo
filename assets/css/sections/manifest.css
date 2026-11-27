@@ -1,0 +1,29 @@
+/* /o-mnie/: Od pierwszej sprzedaży do skalowania biznesów + liczby */
+.manifest .wrap { max-width: 1120px; }
+.manifest__title { font-size: clamp(40px, 4.6vw, 72px); line-height: 1.08; text-align: center; }
+.manifest__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
+.manifest__cols p { font-size: 18px; font-weight: 300; line-height: 1.8; color: var(--text-2); }
+.manifest__sign { display: block; margin-top: 48px; text-align: right; font-size: 13px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+
+.numbers { border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); background: radial-gradient(50% 120% at 50% 0%, rgba(214,184,138,.08), rgba(214,184,138,0) 70%); }
+.numbers__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.numbers__item { padding: 64px 32px 56px; border-left: 1px solid var(--line2); }
+.numbers__item:first-child { border-left: 0; padding-left: 0; }
+.numbers__value { display: block; font-size: clamp(56px, 6vw, 92px); font-weight: 100; letter-spacing: -.05em; line-height: .9; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.numbers__value sup { margin-left: .04em; font-size: .45em; font-weight: 200; letter-spacing: 0; vertical-align: top; position: relative; top: .1em; color: var(--gold); }
+.numbers__label { display: block; margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--muted); max-width: 220px; }
+
+@media (max-width: 1100px) {
+  .numbers__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .numbers__item:nth-child(3) { border-left: 0; padding-left: 0; }
+  .numbers__item:nth-child(n+3) { border-top: 1px solid var(--line2); }
+}
+@media (max-width: 640px) {
+  .manifest__title { font-size: 34px; }
+  .manifest__cols { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; padding-top: 28px; }
+  .manifest__cols p { font-size: 16px; }
+  .manifest__sign { margin-top: 32px; }
+  .numbers__grid { grid-template-columns: 1fr; }
+  .numbers__item, .numbers__item:nth-child(3) { border-left: 0; padding: 32px 0; }
+  .numbers__item + .numbers__item { border-top: 1px solid var(--line2); }
+}

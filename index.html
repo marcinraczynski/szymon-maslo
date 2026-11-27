@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="assets/css/sections/results.css">
 <link rel="stylesheet" href="assets/css/sections/paths.css">
 <link rel="stylesheet" href="assets/css/sections/career.css">
+<link rel="stylesheet" href="assets/css/sections/mission.css">
 <link rel="stylesheet" href="assets/css/sections/people.css">
 <link rel="stylesheet" href="assets/css/sections/newsletter.css">
 <link rel="stylesheet" href="assets/css/sections/apply.css">
@@ -63,11 +64,11 @@
   <header class="topbar">
     <a class="topbar__logo" href="#top" aria-label="Szymon Masło, strona główna"><img src="assets/logo/szymon-maslo-white.svg" width="142" height="36" alt=""></a>
     <nav class="topbar__nav" aria-label="Główna nawigacja">
-      <a href="#">Współpraca</a>
-      <a href="#">Startupy</a>
-      <a href="#">O mnie</a>
+      <a href="wspolpraca/">Współpraca</a>
+      <a href="startupy/">Startupy</a>
+      <a href="o-mnie/">O mnie</a>
       <a href="#">Blog</a>
-      <a href="#">Kontakt</a>
+      <a href="kontakt/">Kontakt</a>
     </nav>
     <div class="topbar__actions">
       <a class="btn btn--ghost topbar__cta" href="#porozmawiajmy">Porozmawiajmy</a>
@@ -177,24 +178,24 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2 thin" id="droga-h" data-split>Przeszedłem każdy szczebel. <br><b>Dlatego wiem, co działa.</b></h2>
-      <p class="lead" data-reveal style="--delay:.25s">Od sprzedaży w&nbsp;terenie po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.</p>
+      <p class="lead" data-reveal style="--delay:.25s">Od handlowca po zarząd spółki. Każdy etap to doświadczenie, które dziś przekładam na Twoją firmę.</p>
     </div>
     <ol class="career__stairs" data-career-list data-stagger="stairs"></ol>
-    <div class="career__mission" data-reveal="scale">
-      <div class="career__mission-glow" aria-hidden="true"></div>
-      <div class="flute career__mission-flute" aria-hidden="true"></div>
-      <div class="career__mission-in">
+    <div class="mission" data-reveal="scale">
+      <div class="mission__glow" aria-hidden="true"></div>
+      <div class="flute mission__flute" aria-hidden="true"></div>
+      <div class="mission__in">
         <img src="assets/logo/fundacja-razem-w-walce-white.svg" alt="Fundacja Razem w Walce" loading="lazy">
         <div>
-          <h3 class="career__mission-title thin">Sukces mierzę nie tylko liczbami, <br><b>ale też wpływem na ludzi.</b></h3>
-          <p class="career__mission-text">Od 2025 tworzę projekty Fundacji Razem w&nbsp;Walce, <br>która wspiera dzieci chore onkologicznie.</p>
+          <h3 class="mission__title thin">Sukces mierzę nie tylko liczbami, <br><b>ale też wpływem na ludzi.</b></h3>
+          <p class="mission__text">Od 2025 tworzę projekty Fundacji Razem w&nbsp;Walce, <br>która wspiera dzieci chore onkologicznie.</p>
         </div>
         <a class="btn btn--ghost" href="#">Poznaj fundację</a>
       </div>
     </div>
     <div class="career__foot" data-reveal>
       <p>Całą tę drogę <b>dostajesz we współpracy.</b></p>
-      <a class="tlink" href="#">Pełna historia <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+      <a class="tlink" href="o-mnie/">Pełna historia <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
     </div>
   </div>
 </section>
@@ -226,7 +227,7 @@
 </section>
 
 <!-- ============ template-part: home/apply ============ -->
-<section class="apply" id="porozmawiajmy" aria-labelledby="apply-h" data-section="apply">
+<section class="apply" id="porozmawiajmy" aria-labelledby="apply-h" data-section="apply" data-apply-config="apply">
   <div class="wrap apply__grid">
     <div data-stagger style="--delay:.1s">
       <h2 class="apply__title h2 thin" id="apply-h">Porozmawiajmy o&nbsp;<b>Twojej firmie.</b></h2>
@@ -234,13 +235,13 @@
       <div class="apply__limit"><span aria-hidden="true"></span><p>Pracuję z&nbsp;maksymalnie trzema nowymi firmami w&nbsp;miesiącu. Gdy miejsca się skończą, trafisz na listę rezerwową.</p></div>
     </div>
 
-    <form data-reveal="scale" style="--delay:.25s" class="apply__card" data-apply-form data-endpoint="" novalidate aria-labelledby="apply-h">
+    <form data-reveal="scale" style="--delay:.25s" class="apply__card" data-apply-form data-source="home" data-endpoint="" novalidate aria-labelledby="apply-h">
       <div class="apply__card-top" aria-live="polite"><small data-apply-step-label>Krok 1 z&nbsp;4</small><small data-apply-chosen></small></div>
       <div class="apply__bar" data-apply-bar aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
 
       <div class="apply__step" data-apply-step="1">
         <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Na jakim etapie <b>jesteś?</b></h3>
-        <div class="apply__choices" data-apply-stages></div>
+        <div class="apply__choices" data-apply-choices="stage" data-advance="2" data-arrow></div>
       </div>
 
       <div class="apply__step" data-apply-step="2" hidden>
@@ -251,25 +252,25 @@
 
       <div class="apply__step" data-apply-step="3" hidden>
         <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Jakiej współpracy <b>szukasz?</b></h3>
-        <div class="apply__choices" data-apply-coop></div>
+        <div class="apply__choices" data-apply-choices="cooperation" data-advance="4" data-arrow></div>
         <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button></div>
       </div>
 
       <div class="apply__step" data-apply-step="4" hidden>
         <h3 class="apply__q thin" tabindex="-1" data-apply-heading>Jak możemy <b>się odezwać?</b></h3>
-        <label class="apply__field"><span>Imię i&nbsp;nazwisko</span><input type="text" name="full_name" autocomplete="name" required aria-describedby="apply-err-name"><em class="apply__error" id="apply-err-name" data-apply-error="name"></em></label>
+        <label class="apply__field"><span>Imię i&nbsp;nazwisko</span><input type="text" name="full_name" autocomplete="name" required data-validate="name" aria-describedby="apply-err-name"><em class="apply__error" id="apply-err-name" data-apply-error="full_name"></em></label>
         <div class="apply__row2">
-          <label class="apply__field"><span>E-mail</span><input type="email" name="email" autocomplete="email" required aria-describedby="apply-err-email"><em class="apply__error" id="apply-err-email" data-apply-error="email"></em></label>
-          <label class="apply__field"><span>Telefon</span><input type="tel" name="phone" autocomplete="tel" required aria-describedby="apply-err-phone"><em class="apply__error" id="apply-err-phone" data-apply-error="phone"></em></label>
+          <label class="apply__field"><span>E-mail</span><input type="email" name="email" autocomplete="email" required data-validate="email" aria-describedby="apply-err-email"><em class="apply__error" id="apply-err-email" data-apply-error="email"></em></label>
+          <label class="apply__field"><span>Telefon</span><input type="tel" name="phone" autocomplete="tel" required data-validate="phone" aria-describedby="apply-err-phone"><em class="apply__error" id="apply-err-phone" data-apply-error="phone"></em></label>
         </div>
         <div class="apply__consent-wrap">
-          <label class="apply__consent"><input type="checkbox" name="consent" required aria-describedby="apply-err-consent"><span>Zgadzam się na kontakt w&nbsp;sprawie zgłoszenia. Szczegóły w&nbsp;<a href="#">polityce prywatności</a>.</span></label>
+          <label class="apply__consent"><input type="checkbox" name="consent" required data-validate="consent" aria-describedby="apply-err-consent"><span>Zgadzam się na kontakt w&nbsp;sprawie zgłoszenia. Szczegóły w&nbsp;<a href="#">polityce prywatności</a>.</span></label>
           <em class="apply__error" id="apply-err-consent" data-apply-error="consent"></em>
         </div>
         <div class="apply__nav"><button class="apply__back" type="button" data-apply-nav="back">Wstecz</button><button class="btn" type="submit">Wyślij</button></div>
       </div>
 
-      <div class="apply__step" data-apply-step="5" hidden>
+      <div class="apply__step" data-apply-step="done" hidden>
         <div class="apply__done">
           <h3 class="apply__done-title thin" tabindex="-1" data-apply-heading>Dziękuję. <b>Odezwiemy się.</b></h3>
           <p class="apply__done-text">Mój zespół przeczyta zgłoszenie i&nbsp;skontaktuje się, żeby umówić rozmowę.</p>
@@ -285,7 +286,7 @@
 <footer class="footer">
   <div class="wrap footer__row" data-stagger="fade">
     <a href="#top" class="footer__logo" aria-label="Szymon Masło, strona główna"><img src="assets/logo/szymon-maslo-white.svg" width="150" height="38" alt="" loading="lazy"></a>
-    <nav class="footer__nav" aria-label="Stopka"><a href="#">Współpraca</a><a href="#">Startupy</a><a href="#">O mnie</a><a href="#">Blog</a><a href="#">Kontakt</a></nav>
+    <nav class="footer__nav" aria-label="Stopka"><a href="wspolpraca/">Współpraca</a><a href="startupy/">Startupy</a><a href="o-mnie/">O mnie</a><a href="#">Blog</a><a href="kontakt/">Kontakt</a></nav>
     <div class="footer__social"><a href="https://www.linkedin.com/in/szymonmaslo/" rel="noopener" target="_blank">LinkedIn</a><a href="https://www.instagram.com/szymon_maslovsky" rel="noopener" target="_blank">Instagram</a></div>
   </div>
   <div class="wrap footer__bottom"><span>© 2026 Szymon Masło Consulting</span><a href="#">Polityka prywatności</a></div>
@@ -300,11 +301,11 @@
   <div class="stickybar__in">
     <a class="topbar__logo" href="#top" aria-label="Szymon Masło, strona główna"><img src="assets/logo/szymon-maslo-white.svg" width="142" height="36" alt=""></a>
     <nav class="topbar__nav" aria-label="Nawigacja w pasku">
-      <a href="#">Współpraca</a>
-      <a href="#">Startupy</a>
-      <a href="#">O mnie</a>
+      <a href="wspolpraca/">Współpraca</a>
+      <a href="startupy/">Startupy</a>
+      <a href="o-mnie/">O mnie</a>
       <a href="#">Blog</a>
-      <a href="#">Kontakt</a>
+      <a href="kontakt/">Kontakt</a>
     </nav>
     <div class="topbar__actions">
       <a class="btn topbar__cta" href="#porozmawiajmy">Porozmawiajmy</a>
@@ -322,11 +323,11 @@
       <button class="mmenu__close" type="button" aria-label="Zamknij menu" data-mmenu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <nav class="mmenu__nav" aria-label="Menu mobilne">
-      <a href="#" style="--i:0">Współpraca <small>01</small></a>
-      <a href="#" style="--i:1">Startupy <small>02</small></a>
-      <a href="#" style="--i:2">O mnie <small>03</small></a>
+      <a href="wspolpraca/" style="--i:0">Współpraca <small>01</small></a>
+      <a href="startupy/" style="--i:1">Startupy <small>02</small></a>
+      <a href="o-mnie/" style="--i:2">O mnie <small>03</small></a>
       <a href="#" style="--i:3">Blog <small>04</small></a>
-      <a href="#" style="--i:4">Kontakt <small>05</small></a>
+      <a href="kontakt/" style="--i:4">Kontakt <small>05</small></a>
     </nav>
     <div class="mmenu__foot">
       <a class="btn" href="#porozmawiajmy">Porozmawiajmy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>

@@ -27,10 +27,13 @@ export function initPathsSlider(root, { paths, initial = 0 }) {
         <small class="paths__label">0${i + 1} · ${esc(p.label)}</small>
         <h3 class="paths__title">${t(p.title)}</h3>
         <p class="paths__desc">${t(p.desc)}</p>
-        <a class="btn" href="#porozmawiajmy" data-paths-apply="${i}">Porozmawiajmy ${arrowRight}</a>
+        <div class="paths__ctas">
+          <a class="btn" href="#porozmawiajmy" data-paths-apply="${i}">Porozmawiajmy ${arrowRight}</a>
+          ${p.more ? `<a class="tlink" href="${esc(p.more)}">Szczegóły</a>` : ''}
+        </div>
       </div>
       <div class="paths__vis">
-        <div class="paths__glow paths__glow--${(i % 4) + 1}" aria-hidden="true"></div>
+        <div class="glow glow--${(i % 4) + 1}" aria-hidden="true"></div>
         <div class="flute" aria-hidden="true"></div>
         <dl class="paths__facts">
           <div><dt>Format</dt><dd>${t(p.format)}</dd></div>

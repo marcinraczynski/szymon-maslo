@@ -1,0 +1,3 @@
+# Wersja podglądowa dla klienta: nie indeksować. Usuń przy publikacji docelowej.
+User-agent: *
+Disallow: /

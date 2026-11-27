@@ -1,0 +1,36 @@
+/* FAQ (akordeon): /wspolpraca/, /startupy/, /kontakt/ */
+.faq__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+.faq__side .lead { margin-top: 24px; max-width: 320px; }
+.faq__list { border-top: 1px solid var(--line2); }
+.faq__item { border-bottom: 1px solid var(--line2); }
+.faq__btn {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px; width: 100%; padding: 28px 0;
+  background: none; border: 0; color: var(--text); font: inherit; font-size: 20px; font-weight: 300; line-height: 1.4; text-align: left; cursor: pointer;
+  transition: color .3s;
+}
+.faq__btn:hover, .faq__item.is-open .faq__btn { color: var(--gold); }
+.faq__ic { position: relative; flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(238,232,222,.2); transition: border-color .3s, transform .5s var(--ease-out); }
+.faq__ic::before, .faq__ic::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.4px; background: currentColor; transform: translate(-50%, -50%); }
+.faq__ic::after { transform: translate(-50%, -50%) rotate(90deg); transition: opacity .3s; }
+.faq__item.is-open .faq__ic { border-color: var(--gold); transform: rotate(180deg); }
+.faq__item.is-open .faq__ic::after { opacity: 0; }
+/* Płynne rozwijanie bez skoku. Wyjątek od zasady „tylko transform i opacity”: animujemy wiersz siatki,
+   bo odpowiedź musi rozsunąć listę. Zamknięta odpowiedź jest niewidoczna dla czytników i klawiatury. */
+.faq__panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .55s var(--ease-out), visibility 0s .55s; }
+.faq__item.is-open .faq__panel { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows .55s var(--ease-out), visibility 0s; }
+.faq__panel-in { overflow: hidden; min-height: 0; }
+.faq__a {
+  padding: 0 64px 30px 0; font-size: 16px; line-height: 1.75; color: var(--text-2);
+  opacity: 0; transform: translate3d(0, 10px, 0); transition: opacity .35s, transform .5s var(--ease-out);
+}
+.faq__item.is-open .faq__a { opacity: 1; transform: none; transition-delay: .12s; }
+
+@media (max-width: 1100px) {
+  .faq__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .faq__btn { font-size: 17px; padding: 22px 0; }
+  .faq__ic { width: 36px; height: 36px; }
+  .faq__a { padding-right: 0; font-size: 15px; }
+}
+.newsletter + .faq { border-top: 1px solid var(--line2); }

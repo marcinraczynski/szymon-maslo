@@ -98,8 +98,8 @@ html:not(.motion) .scroll-progress { display: none; }
 /* ======================= 3. ŚCIEŻKI ======================= */
 /* Przy zmianie slajdu tekst nie skacze: cała karta tylko płynnie się rozjaśnia i przesuwa razem z torem. */
 @keyframes drift { to { transform: translate3d(-6%, 5%, 0) scale(1.12) rotate(4deg); } }
-.motion .paths__slide.is-active .paths__glow { animation: drift 9s ease-in-out infinite alternate; }
-.motion .paths:not(.is-visible) .paths__glow { animation-play-state: paused; }
+.motion .paths__slide.is-active .glow { animation: drift 9s ease-in-out infinite alternate; }
+.motion .paths:not(.is-visible) .glow { animation-play-state: paused; }
 
 /* ======================= 4. SCHODY ======================= */
 .motion [data-stagger="stairs"].is-in > .career__step {
@@ -119,7 +119,7 @@ html:not(.motion) .scroll-progress { display: none; }
 }
 .motion .career.is-visible [data-stagger].is-in .career__step--now::after { animation: ring 2.4s ease-out 1.8s infinite; }
 @keyframes mission-glow { to { transform: translate3d(4%, -3%, 0) scale(1.1); } }
-.motion .career.is-visible .career__mission-glow { animation: mission-glow 10s ease-in-out infinite alternate; }
+.motion [data-section].is-visible .mission__glow { animation: mission-glow 10s ease-in-out infinite alternate; }
 @media (max-width: 640px) {
   .motion [data-stagger="stairs"].is-in > .career__step { animation-name: rv-left; animation-duration: .9s; animation-delay: calc(var(--i, 0) * 70ms); }
   .motion [data-stagger="stairs"].is-in > .career__step > * { animation-delay: calc(var(--i, 0) * 70ms + .25s); }
@@ -145,6 +145,66 @@ html:not(.motion) .scroll-progress { display: none; }
 /* ======================= 8. STOPKA ======================= */
 .motion .footer__giant-box:not(.is-in) .footer__giant { transform: translate3d(0, 70%, 0); }
 .motion .footer__giant-box.is-in .footer__giant { animation: rv-rise 1.6s cubic-bezier(.16, 1, .3, 1) both; }
+
+/* =====================================================================
+   PODSTRONY (etap 2). Ten sam system: data-reveal / data-stagger / data-split,
+   te same czasy i krzywe co na stronie głównej.
+   ===================================================================== */
+@keyframes rv-shot  { from { opacity: 0; transform: translate3d(5%, 0, 0) scale(1.08); } }
+@keyframes rv-vline { from { transform: scaleY(0); } }
+@keyframes rv-diamond { from { opacity: 0; transform: rotate(45deg) scale(0); } }
+@keyframes rv-num   { from { opacity: 0; transform: translate3d(0, 40%, 0); } }
+
+/* dodatkowe warianty wejścia */
+.motion [data-reveal="zoom"].is-in { animation-name: rv-zoom; animation-duration: 2.4s; }
+.motion [data-stagger="left"].is-in > * { animation-name: rv-left; }
+
+/* ---------- hero podstrony ---------- */
+.motion .hero:not(.is-in) :is(.hero__shot, .hero__crumb) { opacity: 0; }
+.motion .hero.is-in .hero__shot { opacity: 1; }
+.motion .hero.is-in .hero__shot img { animation: rv-shot 1.9s cubic-bezier(.16, 1, .3, 1) .25s both; }
+.motion .hero.is-in .hero__crumb { animation: rv-up-sm 1s var(--ease-out) .45s both; }
+.hero--sub .hero__title { --delay: .6s; }
+.motion .hero__shot { transform: translate3d(0, calc(var(--hero-p, 0) * 70px), 0); will-change: transform; }
+/* O mnie: złota linia pod hero rozciąga się od środka */
+.motion .hero--about:not(.is-in)::after { transform: scaleX(0); }
+.motion .hero--about.is-in::after { animation: rv-line 1.6s cubic-bezier(.7, 0, .2, 1) 1.1s both; }
+@media (max-width: 640px) {
+  .motion .hero__shot { transform: none; will-change: auto; }
+}
+
+/* ---------- Współpraca: oferty ---------- */
+.motion .offer.is-in .offer__no { animation: rv-num 1.4s var(--ease-out) .35s both; }
+.motion .offer:not(.is-in) .offer__no { opacity: 0; }
+/* poświaty w kartach dryfują tylko, gdy sekcja jest na ekranie */
+.motion [data-section] :is(.offer__vis, .seek__card, .cta-box) .glow { animation: drift 12s ease-in-out infinite alternate; animation-play-state: paused; }
+.motion [data-section].is-visible :is(.offer__vis, .seek__card, .cta-box) .glow { animation-play-state: running; }
+.motion [data-section].is-visible .offer-startup__glow { animation: mission-glow 10s ease-in-out infinite alternate; }
+
+/* ---------- proces: łączniki między krokami rysują się po kolei ---------- */
+.motion [data-stagger="process"]:not(.is-in) > .process__step::after { transform: scaleX(0); }
+.motion [data-stagger="process"].is-in > .process__step::after {
+  animation: rv-line .7s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * var(--rv-step) + .8s);
+}
+
+/* ---------- pas z cytatem: tło przybliża się przy wejściu ---------- */
+.motion .band:not(.is-visible) .band__bg img { transform: scale(1.12); }
+.motion .band .band__bg img { transition: transform 2.4s cubic-bezier(.16, 1, .3, 1); }
+
+/* ---------- O mnie: rozdziały osi pojawiają się jeden po drugim ---------- */
+.motion [data-reveal="chapter"].is-in { animation-name: rv-fade; animation-duration: .6s; }
+.motion [data-reveal="chapter"]:not(.is-in)::before { transform: scaleY(0); }
+.motion [data-reveal="chapter"].is-in::before { animation: rv-vline 1.1s cubic-bezier(.7, 0, .2, 1) both; animation-delay: var(--delay, 0s); }
+.motion [data-reveal="chapter"]:not(.is-in)::after { opacity: 0; }
+.motion [data-reveal="chapter"].is-in::after { animation: rv-diamond .7s var(--ease-out) both; animation-delay: calc(var(--delay, 0s) + .3s); }
+.motion [data-reveal="chapter"].is-in > * { animation: rv-up .95s var(--ease-out) both; }
+.motion [data-reveal="chapter"].is-in > :nth-child(1) { animation-delay: calc(var(--delay, 0s) + .1s); }
+.motion [data-reveal="chapter"].is-in > :nth-child(2) { animation-delay: calc(var(--delay, 0s) + .2s); }
+.motion [data-reveal="chapter"].is-in > :nth-child(3) { animation-delay: calc(var(--delay, 0s) + .32s); animation-name: rv-right; animation-duration: 1.1s; }
+
+/* ---------- O mnie: zdjęcie „W co wierzę” ---------- */
+.motion .beliefs__photo.is-in img { animation: rv-zoom 2.2s cubic-bezier(.16, 1, .3, 1) both; }
 
 /* ======================= menu mobilne ======================= */
 .mmenu__panel:focus { outline: none; }

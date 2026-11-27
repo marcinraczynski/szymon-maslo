@@ -58,10 +58,20 @@
 .apply__back { background: none; border: 0; padding: 12px 0; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; cursor: pointer; }
 .apply__back:hover { color: var(--text); }
 .apply__done-title { font-size: 48px; line-height: 1.05; }
+
+/* pytania z wyborem w polu formularza (Startupy: branża, liczba klientów; Kontakt: temat) */
+.apply__fs { border: 0; padding: 0; margin: 26px 0 0; min-width: 0; }
+.apply__fs legend { padding: 0; margin-bottom: 14px; font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+.apply__fs .apply__choices { margin-top: 0; }
+.apply__fs .apply__choices--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.apply__fs .apply__choice { min-height: 58px; font-size: 15px; }
+.apply__field input::placeholder, .apply__field textarea::placeholder { color: var(--placeholder); }
+.apply__nav--end { justify-content: flex-end; }
 .apply__done-text { margin-top: 22px; font-size: 17px; font-weight: 300; line-height: 1.65; color: var(--text-2); max-width: 440px; }
 
 @media (max-width: 1100px) {
   .apply__grid { grid-template-columns: 1fr; }
+  .apply__fs .apply__choices--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .apply__choices { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -76,4 +86,5 @@
   .apply__choice { min-height: 64px; }
   .apply__row2 { grid-template-columns: 1fr; gap: 0; }
   .apply__nav { flex-wrap: wrap; }
+  .apply__fs .apply__choices, .apply__fs .apply__choices--four { grid-template-columns: 1fr; }
 }

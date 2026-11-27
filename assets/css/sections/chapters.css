@@ -1,0 +1,33 @@
+/* /o-mnie/: Dziewięć rozdziałów, jedna droga (oś generowana z data.js → chapters) */
+.chapters { position: relative; border-top: 1px solid var(--line2); }
+.chapters__item {
+  position: relative; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr); gap: 40px; align-items: start;
+  padding: 44px 0 44px 36px; border-bottom: 1px solid var(--line2); transition: background .5s;
+}
+/* pionowa linia osi i romb */
+.chapters__item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--line); transform-origin: 50% 0; }
+.chapters__item::after { content: ""; position: absolute; left: -4px; top: 58px; width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); }
+.chapters__item:hover { background: linear-gradient(90deg, rgba(214,184,138,.06), rgba(214,184,138,0) 70%); }
+.chapters__year { display: block; font-size: 44px; font-weight: 100; letter-spacing: -.03em; line-height: 1; color: var(--gold); }
+.chapters__role { display: block; margin-top: 14px; font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+.chapters__name { font-size: 26px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+.chapters__text { margin-top: 14px; font-size: 16px; line-height: 1.75; color: var(--text-2); }
+.chapters__lesson { padding: 22px 26px; border-radius: 18px; background: var(--card); border: 1px solid var(--line2); }
+.chapters__lesson small { font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+.chapters__lesson p { margin-top: 10px; font-size: 18px; font-weight: 300; line-height: 1.45; }
+.chapters__item--now { background: linear-gradient(90deg, rgba(214,184,138,.12), rgba(214,184,138,0) 75%); }
+.chapters__item--now::after { box-shadow: 0 0 0 5px rgba(214,184,138,.2), 0 0 22px rgba(214,184,138,.8); }
+.chapters__item--now .chapters__year { font-weight: 600; }
+.chapters__item--now .chapters__lesson { border-color: var(--line); }
+
+@media (max-width: 1100px) {
+  .chapters__item { grid-template-columns: 1fr 2fr; }
+  .chapters__lesson { grid-column: 2; }
+}
+@media (max-width: 640px) {
+  .chapters__item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0 32px 24px; }
+  .chapters__item::after { top: 44px; }
+  .chapters__year { font-size: 38px; }
+  .chapters__lesson { grid-column: auto; padding: 18px 20px; }
+  .chapters__lesson p { font-size: 17px; }
+}
